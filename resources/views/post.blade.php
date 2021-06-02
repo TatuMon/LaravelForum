@@ -1,13 +1,13 @@
 @extends('layout')
 
 @section('title')
-    <title> {{ $post->getTitle() }} </title>
+    <title> {{ $post->title }} </title>
 @endsection
 
 @section('content')
     <article>
-            <h1>{{ $post->getTitle() }}</h1>
-            {!! $post->getBody() !!} 
+            <h1>{{ $post->title }}</h1>
+            {!! $post->body !!} 
     </article>
     <a href="/">Go back</a>
 @endsection
