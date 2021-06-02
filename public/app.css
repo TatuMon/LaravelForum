@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body, html{
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 120%;
+}
+
+article{
+    width: 50vw;
+    margin: 20px auto;
+}
+
+.date{
+    display: block;
+    text-align: end;
+    font-size: 20px;
+}
