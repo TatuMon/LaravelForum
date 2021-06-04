@@ -9,7 +9,7 @@
         @foreach($posts as $post)
         <article>
             <h1 class="title"><a href="/post/{{ $post->slug }}">{{ $post->title }}</a></h1>
-            <h3 class="community_name">{{ $post->community->name }}</h3>
+            <h3 class="community_name"><a href="/comm/{{ $post->community->slug }}"> {{ $post->community->name }} </a></h3>
             <p class="excerpt">{!! $post->body !!}</p>
             <i class="date">{{ $post->published_at }}</i>
             <hr>
