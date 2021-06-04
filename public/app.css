@@ -6,9 +6,29 @@ body, html{
     font-size: 120%;
 }
 
+.no_posts_alert{
+    display: block;
+    text-align: center;
+}
+
 article{
     width: 50vw;
     margin: 20px auto;
+
+}
+
+.title{
+    margin-bottom: 0;
+}
+
+.title a{
+    text-decoration: none;
+    color: black;
+}
+
+.community_name{
+    margin: 0;
+    font-weight: lighter;
 }
 
 .date{

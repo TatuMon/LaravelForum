@@ -16,9 +16,10 @@ class CreateCommunitiesTable extends Migration
         Schema::create('communities', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->integer('members');
-            $table->string('created_by');
-            $table->timestamp('comm_created_at');
+            $table->string('description')->unique();
+            $table->integer('members')->default(0);
+            $table->string('created_by')->nullable();
+            $table->timestamp('comm_created_at')->nullable();
             $table->timestamps();
         });
     }
