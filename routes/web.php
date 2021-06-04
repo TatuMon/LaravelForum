@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Community;
 use Illuminate\Support\Facades\Route;
 use \App\Models\Post;
 use Illuminate\Support\Facades\Cache;
@@ -25,5 +26,11 @@ Route::get('/', function () {
 Route::get('post/{post:slug}', function(Post $post){
     return view('post', [
         'post' => $post
+    ]);
+});
+
+Route::get('comm/{community:slug}', function(Community $community){
+    return view('posts', [
+        'posts' => $community->posts
     ]);
 });
