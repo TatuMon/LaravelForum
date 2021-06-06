@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    <div id="main-container" class="main-container">
     @if (count($posts))
         @foreach($posts as $post)
         <article>
@@ -19,4 +20,5 @@
     @else
         <h1 class="no_posts_alert">No posts were found :(</h1>
     @endif
+    </div>
 @endsection

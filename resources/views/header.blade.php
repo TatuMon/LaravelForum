@@ -10,9 +10,11 @@
 
     <div class="user-search-bar">
         <form>
-            <input type="search">
+            <input type="search" spellcheck="false" placeholder="Search for communities">
         </form>
     </div>
+
+    <i class="fab fa-github github"></i>
 
     <div class="user">
         <button>LogIn</button>
