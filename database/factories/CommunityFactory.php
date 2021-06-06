@@ -24,7 +24,7 @@ class CommunityFactory extends Factory
         return [
             'name' => $this->faker->word,
             'slug' => $this->faker->slug,
-            'description' => $this->faker->text,
+            'description' => $this->faker->sentence,
         ];
     }
 }

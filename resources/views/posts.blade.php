@@ -10,7 +10,11 @@
         @foreach($posts as $post)
         <article>
             <a href="/post/{{ $post->slug }}">
-                <a class="community_name" href="/comm/{{ $post->community->slug }}">{{ $post->community->name }}</a>
+                <div class="post-info">
+                    </span><a class="community_name" href="/comm/{{ $post->community->slug }}">{{ $post->community->name }}</a>
+                    <span>•</span>
+                    <a class="user_name" href="#">username</a>
+                </div>
                 <h1 class="title">{{ $post->title }}</h1>
                 <p class="excerpt">{!! $post->body !!}</p>
                 <i class="date">{{ $post->published_at }}</i>
