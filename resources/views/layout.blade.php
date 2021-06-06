@@ -10,6 +10,8 @@
 
     <body>
         @include('header')
-        @yield('content')
+        <div id="main-container" class="main-container">
+            @yield('content')
+        </div>
     </body>
 </html>

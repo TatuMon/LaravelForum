@@ -1,6 +1,6 @@
 <header>
     <div class="logo">
-        <h1>Good Mambo</h1>
+        <a href="/"><h1>Good Mambo</h1></a>
     </div>
 
     <div class="community-filter">

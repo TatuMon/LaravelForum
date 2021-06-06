@@ -6,8 +6,12 @@
 
 @section('content')
     <article>
-            <h1>{{ $post->title }}</h1>
-            {!! $post->body !!} 
+        <div class="post-info">
+            <span><a class="community_name" href="/comm/{{ $post->community->slug }}">comm/{{ $post->community->name }}</a></span>
+            <span>•</span>
+            <span>posted by <a class="user_name" href="/usr/{{ $post->user->name }}">{{ $post->user->name }}</a></span>
+        </div>
+        <h1>{{ $post->title }}</h1>
+        <p>{!! $post->body !!}</p>
     </article>
-    <a href="/">Go back</a>
 @endsection
