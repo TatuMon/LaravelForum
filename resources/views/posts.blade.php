@@ -8,11 +8,12 @@
     @if (count($posts))
         @foreach($posts as $post)
         <article>
-            <h1 class="title"><a href="/post/{{ $post->slug }}">{{ $post->title }}</a></h1>
-            <h3 class="community_name"><a href="/comm/{{ $post->community->slug }}"> {{ $post->community->name }} </a></h3>
-            <p class="excerpt">{!! $post->body !!}</p>
-            <i class="date">{{ $post->published_at }}</i>
-            <hr>
+            <a href="/post/{{ $post->slug }}">
+                <a class="community_name" href="/comm/{{ $post->community->slug }}">{{ $post->community->name }}</a>
+                <h1 class="title">{{ $post->title }}</h1>
+                <p class="excerpt">{!! $post->body !!}</p>
+                <i class="date">{{ $post->published_at }}</i>
+            </a>
         </article>
         @endforeach
     @else
