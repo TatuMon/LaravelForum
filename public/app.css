@@ -6,6 +6,24 @@ body, html{
     font-size: 120%;
 }
 
+header{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid black;
+    box-shadow: 0px 5px 30px 0px #000000;
+}
+
+header .logo h1{
+    padding: 0;
+    margin: 0 20px 0px 20px;
+}
+
+header .user-search-bar{
+    margin-left: 50px;
+    margin-right: auto;
+}
+
 .no_posts_alert{
     display: block;
     text-align: center;
