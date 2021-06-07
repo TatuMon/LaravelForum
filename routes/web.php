@@ -1,8 +1,9 @@
 <?php
 
 use App\Models\Community;
-use Illuminate\Support\Facades\Route;
 use \App\Models\Post;
+use \App\Models\User;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Cache;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 
@@ -19,7 +20,7 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 Route::get('/', function () {
     return view('posts', [
-        'posts' => Post::with('community')->get()
+        'posts' => Post::latest('published_at')->with('community', 'user')->get()
     ]);
 });
 
@@ -32,5 +33,11 @@ Route::get('post/{post:slug}', function(Post $post){
 Route::get('comm/{community:slug}', function(Community $community){
     return view('posts', [
         'posts' => $community->posts
+    ]);
+});
+
+Route::get('usr/{user:name}', function(User $user){
+    return view('posts', [
+        'user' => $user,
     ]);
 });

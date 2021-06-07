@@ -29,7 +29,8 @@ class PostFactory extends Factory
             "user_id" => rand(1, 3),
             "community_id" => Community::factory(),
             "excerpt" => $this->faker->sentence,
-            "body" => $this->faker->text
+            "body" => $this->faker->text,
+            "published_at" => now()
         ];
     }
 }
