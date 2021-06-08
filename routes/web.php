@@ -31,13 +31,13 @@ Route::get('post/{post:slug}', function(Post $post){
 });
 
 Route::get('comm/{community:slug}', function(Community $community){
-    return view('posts', [
-        'posts' => $community->posts
+    return view('community', [
+        'comm' => $community
     ]);
 });
 
-Route::get('usr/{user:name}', function(User $user){
-    return view('posts', [
+Route::get('usr/{user:slug}', function(User $user){
+    return view('user', [
         'user' => $user,
     ]);
 });

@@ -11,7 +11,7 @@
                 <div class="post-info">
                     <span><a class="community_name" href="/comm/{{ $post->community->slug }}">comm/{{ $post->community->name }}</a></span>
                     <span>•</span>
-                    <span>posted by <a class="user_name" href="/usr/{{ $post->user->name }}">{{ $post->user->name }}</a></span>
+                    <span>posted by <a class="user_name" href="/usr/{{ $post->user->slug }}">{{ $post->user->username }}</a></span>
                 </div>
                 <a href="/post/{{ $post->slug }}"><h1 class="title">{{ $post->title }}</h1></a>
                 <a href="/post/{{ $post->slug }}"><p class="excerpt">{!! $post->body !!}</p></a>

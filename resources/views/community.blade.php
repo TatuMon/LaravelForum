@@ -1,21 +1,21 @@
 @extends('layout')
 
 @section('title')
-    <title>{{ $user->username }}</title>
+    <title>{{ $comm->name }}</title>
 @endsection
 
 @section('content')
-    <h1> {{ $user->username }} </h1>    
+    <h1> {{ $comm->name }} </h1>    
 
     <hr>
 
-    @if (count($user->posts))
-        @foreach($user->posts as $post)
+    @if (count($comm->posts))
+        @foreach($comm->posts as $post)
             <article>
                 <div class="post-info">
-                    <span><a class="community_name" href="/comm/{{ $post->community->slug }}">comm/{{ $post->community->name }}</a></span>
+                    <span>comm/{{ $comm->name }}</span>
                     <span>•</span>
-                    <span>posted by {{ $user->username }}</span>
+                    <span>posted by <a class="user_name" href="/usr/{{ $post->user->slug }}">{{ $post->user->username }}</a></span>
                 </div>
                 <a href="/post/{{ $post->slug }}"><h3 class="title">{{ $post->title }}</h3></a>
                 <a href="/post/{{ $post->slug }}"><p class="excerpt">{!! $post->body !!}</p></a>
