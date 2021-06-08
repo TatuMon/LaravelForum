@@ -22,7 +22,7 @@ class UserFactory extends Factory
      */
     public function definition()
     {
-        $name = $this->faker->name();
+        $name = $this->faker->unique()->userName;
         return [
             'username' => $name,
             'slug' => Str::slug($name, '-'),

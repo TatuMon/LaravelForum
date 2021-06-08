@@ -38,12 +38,13 @@ article:hover{
 
 .post-info span{
     font-size: 17px;
+    color: #9a9b9c
 }
 
 .post-info a{
     font-size: 17px;
     text-decoration: none;
-    color: whitesmoke;
+    color: #9a9b9c;
 }
 
 .post-info a:hover{
@@ -58,10 +59,4 @@ a{
 .community_name{
     margin: 0;
     font-weight: lighter;
-}
-
-.date{
-    display: block;
-    text-align: end;
-    font-size: 20px;
 }

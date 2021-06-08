@@ -32,7 +32,8 @@ Route::get('post/{post:slug}', function(Post $post){
 
 Route::get('comm/{community:slug}', function(Community $community){
     return view('community', [
-        'comm' => $community
+        'name' => $community->name,
+        'posts' => $community->posts->load(['community', 'user'])
     ]);
 });
 
