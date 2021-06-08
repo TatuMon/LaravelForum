@@ -1,6 +1,6 @@
 <header>
     <div class="logo">
-        <a href="/"><h1>Good Mambo</h1></a>
+        <a href="/"><img src="{{asset('image/branca-logo.png')}}" alt="logo"></a>
     </div>
 
     <div class="community-filter">
