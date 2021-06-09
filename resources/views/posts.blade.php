@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-    <title>Good Mambo</title>
+    <title>Good Mambo: the front page of the Branca Team</title>
 @endsection
 
 @section('content')

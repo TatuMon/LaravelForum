@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-    <title> {{ $post->title }} </title>
+    <title> {{ $post->title }} : {{ $post->community->name }} </title>
 @endsection
 
 @section('content')
