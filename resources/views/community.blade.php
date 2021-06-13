@@ -1,8 +1,5 @@
-@extends('layout')
-
-<x-title :title="$name" />
-
-@section('content')
+<x-layout>
+    <x-slot name="title"> {{ $name }} </x-slot>
     <h1> {{ $name }} </h1>    
 
     <hr>
@@ -23,4 +20,4 @@
     @else
         <h1 class="no_posts_alert">No posts were found :(</h1>
     @endif
-@endsection
+</x-layout>

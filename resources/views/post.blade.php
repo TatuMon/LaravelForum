@@ -1,10 +1,6 @@
-@extends('layout')
+<x-layout>
+    <x-slot name="title">{{ $post->title }} : {{ $post->community->name }}</x-slot>
 
-@section('title')
-    <title> {{ $post->title }} : {{ $post->community->name }} </title>
-@endsection
-
-@section('content')
     <article>
         <div class="post-info">
             <span><a class="community_name" href="/comm/{{ $post->community->slug }}">comm/{{ $post->community->name }}</a></span>
@@ -15,4 +11,5 @@
         <h1>{{ $post->title }}</h1>
         <p>{!! $post->body !!}</p>
     </article>
-@endsection
+</x-layout>
+

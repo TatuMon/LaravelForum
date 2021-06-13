@@ -1,10 +1,6 @@
-@extends('layout')
+<x-layout>
+    <x-slot name="title">{{ $user->username }}</x-slot>
 
-@section('title')
-    <title>{{ $user->username }}</title>
-@endsection
-
-@section('content')
     <h1> {{ $user->username }} </h1>    
 
     <hr>
@@ -25,4 +21,5 @@
     @else
         <h1 class="no_posts_alert">No posts were found :(</h1>
     @endif
-@endsection
+
+</x-layout>
