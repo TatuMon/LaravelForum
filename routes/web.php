@@ -40,5 +40,6 @@ Route::get('comm/{community:slug}', function(Community $community){
 Route::get('usr/{user:slug}', function(User $user){
     return view('user', [
         'user' => $user,
+        'posts' => $user->posts
     ]);
 });
