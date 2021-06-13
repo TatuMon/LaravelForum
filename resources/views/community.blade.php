@@ -1,8 +1,6 @@
 @extends('layout')
 
-@section('title')
-    <title>{{ $name }}</title>
-@endsection
+<x-title :title="$name" />
 
 @section('content')
     <h1> {{ $name }} </h1>    
