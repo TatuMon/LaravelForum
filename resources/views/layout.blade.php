@@ -28,7 +28,7 @@
     </head>
 
     <body>
-        @include('header')
+        <x-header />
         <div id="main-container" class="main-container">
             @yield('content')
         </div>
