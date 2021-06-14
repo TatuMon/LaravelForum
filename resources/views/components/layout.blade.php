@@ -25,6 +25,8 @@
 
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="stylesheet" href="/app.css">
+
+        <script defer src="https://unpkg.com/alpinejs@3.0.1/dist/cdn.min.js"></script>
     </head>
 
     <body>
