@@ -20,26 +20,30 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 Route::get('/', function () {
     return view('posts', [
-        'posts' => Post::latest('published_at')->with('community', 'user')->get()
+        'posts' => Post::latest('published_at')->with('community', 'user')->get(),
+        'comms' => Community::select('name', 'slug')->get()
     ]);
-});
+})->name('home');
 
 Route::get('post/{post:slug}', function(Post $post){
     return view('post', [
-        'post' => $post
+        'post' => $post,
+        'comms' => Community::select('name', 'slug')->get()
     ]);
-});
+})->name('post');
 
 Route::get('comm/{community:slug}', function(Community $community){
     return view('community', [
         'name' => $community->name,
-        'posts' => $community->posts->load(['community', 'user'])
+        'posts' => $community->posts->load(['community', 'user']),
+        'comms' => Community::select('name', 'slug')->get()
     ]);
-});
+})->name('comm');
 
 Route::get('usr/{user:slug}', function(User $user){
     return view('user', [
         'user' => $user,
-        'posts' => $user->posts
+        'posts' => $user->posts,
+        'comms' => Community::select('name', 'slug')->get()
     ]);
-});
+})->name('usr');

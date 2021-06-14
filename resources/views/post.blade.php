@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :comms="$comms">
     <x-slot name="title">{{ $post->title }} : {{ $post->community->name }}</x-slot>
 
     <article>

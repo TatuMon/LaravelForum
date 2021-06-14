@@ -1,3 +1,5 @@
+@props(['comms'])
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,7 +32,7 @@
     </head>
 
     <body>
-        <x-header />
+        <x-header :comms="$comms"/>
         <div id="main-container" class="main-container">
             {{ $slot }}
         </div>
