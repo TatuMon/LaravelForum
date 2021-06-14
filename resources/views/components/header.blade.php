@@ -18,8 +18,14 @@
     </div>
 
     <div class="user-search-bar">
-        <form>
-            <input type="search" spellcheck="false" placeholder="Search for users">
+        <form method="GET" action="">
+            <input
+            type="search"
+            name="search"
+            spellcheck="false"
+            placeholder="Search for a user or a post"
+            value="{{ request('search') }}"
+            >
         </form>
     </div>
 
