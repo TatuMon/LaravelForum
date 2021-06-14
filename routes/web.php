@@ -20,15 +20,19 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 Route::get('/', function () {
     $posts = Post::latest('published_at')->with('community', 'user');
+    $usrs = User::where('username', 'like', '');
 
     if(request('search')){
         $posts->where('title', 'like', '%' . request('search') . '%')
         ->orWhere('body', 'like', '%' . request('search') . '%');
+
+        $usrs = User::where('username', 'like', '%' . request('search') . '%');
     }
 
     return view('posts', [
         'posts' => $posts->get(),
-        'comms' => Community::select('name', 'slug')->get()
+        'comms' => Community::select('name', 'slug')->get(),
+        'usrs' => $usrs->get()
     ]);
 })->name('home');
 

@@ -1,6 +1,12 @@
-@props(['posts'])
+@props(['posts', 'usrs'])
 
-@if (count($posts))
+@isset($usrs)
+    @foreach($usrs as $usr)
+        <x-usr-card :usr="$usr" />
+    @endforeach
+@endisset
+
+@if(count($posts))
     @foreach($posts as $post)
         <x-post-card :post="$post" />
     @endforeach
