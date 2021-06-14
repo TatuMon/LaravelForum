@@ -9,6 +9,11 @@ class Post extends Model
 {
     use HasFactory;
 
+    public function scopeFilter($query, array $filters){
+        $query->when($filters['search'] ?? false, fn() => $query->where('title', 'like', '%' . request('search') . '%')
+        ->orWhere('body', 'like', '%' . request('search') . '%'));
+    }
+
     public function user(){
         return $this->belongsTo(User::class);
     }
