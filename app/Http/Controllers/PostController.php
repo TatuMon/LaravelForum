@@ -16,4 +16,11 @@ class PostController extends Controller
             'usrs' => User::filter(request(['search']))->get()
         ]);
     }
+
+    public function found(Post $post){
+        return view('post', [
+            'post' => $post,
+            'comms' => Community::select('name', 'slug')->get()
+        ]);
+    }
 }
