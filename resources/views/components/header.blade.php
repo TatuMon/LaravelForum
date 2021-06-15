@@ -5,7 +5,7 @@
         <a href="/"><img src="{{asset('image/branca-logo.png')}}" alt="logo"></a>
     </div>
 
-    <x-comm-dropdown :comms="$comms"/>
+    <x-comm-dropdown />
 
     <div class="user-search-bar">
         <form method="GET" action="">

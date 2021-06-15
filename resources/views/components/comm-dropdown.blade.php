@@ -1,5 +1,3 @@
-@props(['comms'])
-
 <div class="community-filter" x-data="{show : false}" @click.away="show = false">
     <div @click="show = !show" class="dropdown-button">
         <i class="fas fa-users"></i>
