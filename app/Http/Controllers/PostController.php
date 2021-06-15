@@ -20,7 +20,8 @@ class PostController extends Controller
     public function found(Post $post){
         return view('post.found', [
             'post' => $post,
-            'comms' => Community::select('name', 'slug')->get()
+            'comms' => Community::select('name', 'slug')->get(),
+            'hola' => 'cuchulai'
         ]);
     }
 }
