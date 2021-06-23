@@ -23,6 +23,6 @@ Route::get('/', [PostController::class, 'search'])->name('home');
 
 Route::get('post/{post:slug}', [PostController::class, 'found'])->name('post');
 
-Route::get('comm/{community:slug}', [CommunityController::class, 'found'])->name('comm');
+Route::get('comm/{community:slug}', [CommunityController::class, 'search'])->name('comm');
 
 Route::get('usr/{user:slug}', [UserController::class, 'found'])->name('usr');

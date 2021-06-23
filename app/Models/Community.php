@@ -9,6 +9,10 @@ class Community extends Model
 {
     use HasFactory;
 
+    public function scopeFilter($query, array $filters){
+        
+    }
+
     public function posts(){
         return $this->hasMany(Post::class);
     }
