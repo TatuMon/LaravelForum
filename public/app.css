@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url("header.css");
+@import url("paginator.css");
 
 body, html{
     margin: 0;
@@ -48,13 +49,13 @@ article:hover{
 }
 
 .post-info a:hover{
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
-a{
-    text-decoration: none;
-    color: whitesmoke;
-}
+article a{
+    text-decoration: none !important;
+    color: whitesmoke !important;
+} 
 
 .community_name{
     margin: 0;
