@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function search(){
         return view('posts', [
-            'posts' => Post::latest('published_at')->filter(request(['search']))->paginate(1),
+            'posts' => Post::latest('published_at')->filter(request(['search']))->get(),
             'comms' => Community::select('name', 'slug')->get(),
             'usrs' => User::filter(request(['search']))->get()
         ]);
@@ -20,7 +20,8 @@ class PostController extends Controller
     public function found(Post $post){
         return view('post', [
             'post' => $post,
-            'comms' => Community::select('name', 'slug')->get()
+            'comms' => Community::select('name', 'slug')->get(),
+            'comments' => $post->comments
         ]);
     }
 }

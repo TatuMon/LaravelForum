@@ -10,6 +10,27 @@
         </div>
         <h1>{{ $post->title }}</h1>
         <p>{!! $post->body !!}</p>
+
+        <div>
+            <div>
+                <p>Comment as <span>(aca iria el usuario que esta logueado)</span></p>
+            </div>
+            <div>
+                <textarea>
+
+                </textarea>
+            </div>
+        </div>
+
+        @if(count($comments))
+            @foreach($comments as $comment)
+            <x-comment :comment="$comment"/>
+            @endforeach
+        @else
+            <div>
+                <h2>No comments yet :c</h2>    
+            </div>    
+        @endif
     </article>
 </x-layout>
 
