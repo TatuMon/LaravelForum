@@ -21,4 +21,10 @@ class Post extends Model
     public function community(){
         return $this->belongsTo(Community::class);
     }
+
+    public function comment(){
+        return $this->hasMany(Comment::class);
+    }
+
+    
 }
