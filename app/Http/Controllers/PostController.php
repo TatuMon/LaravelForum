@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function search(){
         return view('posts', [
-            'posts' => Post::latest('published_at')->filter(request(['search']))->get(),
+            'posts' => Post::latest('published_at')->filter(request(['search']))->paginate(2),
             'comms' => Community::select('name', 'slug')->get(),
             'usrs' => User::filter(request(['search']))->get()
         ]);

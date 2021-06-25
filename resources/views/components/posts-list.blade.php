@@ -13,3 +13,5 @@
 @else
     <h1 class="no_posts_alert">No posts were found :(</h1>
 @endif
+
+{{ $posts->links() }}
