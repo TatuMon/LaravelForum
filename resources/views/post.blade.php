@@ -11,16 +11,7 @@
         <h1>{{ $post->title }}</h1>
         <p>{!! $post->body !!}</p>
 
-        <div>
-            <div>
-                <p>Comment as <span>(aca iria el usuario que esta logueado)</span></p>
-            </div>
-            <div>
-                <textarea>
-
-                </textarea>
-            </div>
-        </div>
+        <x-make-comment />
 
         @if(count($comments))
             @foreach($comments as $comment)
