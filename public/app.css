@@ -21,6 +21,7 @@ body, html{
 
 article{
     width: 50vw;
+    max-height: 500px;
     margin: 10px auto;
     padding: 0px 20px;
     border: 1px solid #676869;
