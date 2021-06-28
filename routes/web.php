@@ -3,6 +3,7 @@
 use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RegisterController;
 use App\Models\Community;
 use \App\Models\Post;
 use \App\Models\User;
@@ -25,4 +26,8 @@ Route::get('post/{post:slug}', [PostController::class, 'found'])->name('post');
 
 Route::get('comm/{community:slug}', [CommunityController::class, 'search'])->name('comm');
 
-Route::get('usr/{user:slug}', [UserController::class, 'found'])->name('usr');
+Route::get('usr/{user:username}', [UserController::class, 'found'])->name('usr');
+
+Route::get('/register', [RegisterController::class, 'register'])->name('register');
+
+Route::post('/register', [RegisterController::class, 'submitData'])->name('submitData');
