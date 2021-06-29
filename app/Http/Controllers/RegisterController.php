@@ -18,6 +18,6 @@ class RegisterController extends Controller
             'password' => 'required|min:7'
         ]));
  
-        return redirect('/');
+        return redirect('/')->with('success', 'Bienvenido a las tierras brancanienses!');
     }
 }

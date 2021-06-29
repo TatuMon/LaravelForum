@@ -62,3 +62,18 @@ article a{
     margin: 0;
     font-weight: lighter;
 }
+
+.success{
+    position: fixed;
+    bottom: 10px;
+    left: 25%;
+    border-radius: 10px;
+    background-color: #008F39;
+    text-align: center;
+    padding: 30px;
+    cursor: default;
+}
+
+.success p{
+    margin: 0;
+}
