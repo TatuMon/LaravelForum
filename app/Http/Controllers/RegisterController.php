@@ -17,7 +17,7 @@ class RegisterController extends Controller
             'email' => 'required|email:rfc,dns',
             'password' => 'required'
         ]));
-
+ 
         return redirect('/');
     }
 }
