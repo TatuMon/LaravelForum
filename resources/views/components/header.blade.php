@@ -23,6 +23,6 @@
 
     <div class="user">
         <button>LogIn</button>
-        <button>SignUp</button>
+        <button><a href="/register">SignUp</a></button>
     </div>
 </header>
