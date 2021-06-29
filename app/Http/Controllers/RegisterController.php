@@ -13,9 +13,9 @@ class RegisterController extends Controller
 
     public function submitData(){
         User::create(request()->validate([
-            'username' => 'required|max:20|min:3|regex:/^[A-Za-z]-*[\w]/',
-            'email' => 'required|email:rfc,dns',
-            'password' => 'required'
+            'username' => 'required|unique:users,username|max:20|min:3|regex:/^[A-Za-z]-*[\w]/',
+            'email' => 'required|unique:users,email|email:rfc,dns',
+            'password' => 'required|min:7'
         ]));
  
         return redirect('/');
