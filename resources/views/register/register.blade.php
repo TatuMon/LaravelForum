@@ -1,22 +1,37 @@
-<section>
-    <h1>Registration</h1>
-    <form method="POST" action="/register">
-        @csrf
+<head>
+    <title>Registration</title>
 
-        <label for="username">username</label>
-        <input name="username" id="username" type="text" value="{{ old('username') }}" required>
+    <link rel="stylesheet" href="/register.css">
+</head>
+
+<body>
+    <section id="register">
+        <h1>Registration</h1>
+        <form method="POST" action="/register" id="register-form">
+            @csrf
+            <div class="input first">
+                <label for="username">username</label>
+                <input name="username" id="username" type="text" value="{{ old('username') }}" required>
+            </div>
+
+            <div class="input">
+                <label for="email">e-mail</label>
+                <input name="email" id="email" type="email" value="{{ old('email') }}" required>
+            </div>
+
+            <div class="input">
+                <label for="password">password</label>
+                <input name="password" id="password" type="password" required>
+            </div>
+
+            <div class="input">
+                <label for="password_confirmation">confirm password</label>
+                <input name="password_confirmation" id="password" type="password" required>
+            </div>
+
+            <input class="submit" type="submit" value="SUBMIT">
         
-        <label for="email">e-mail</label>
-        <input name="email" id="email" type="email" value="{{ old('email') }}" required>
-
-        <label for="password">Password</label>
-        <input name="password" id="password" type="password" required>
-
-        <label for="password_confirmation">Password</label>
-        <input name="password_confirmation" id="password" type="password" required>
-
-        <input type="submit" value="Submit">
-    
-        <x-user-form/>
-    </form>
-</section>
+            <x-user-form/>
+        </form>
+    </section>
+</body>
