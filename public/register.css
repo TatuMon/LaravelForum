@@ -34,8 +34,13 @@ body{
 }
 
 #register #register-form .input input{
-    height: 25px;
+    height: 45px;
     font-size: 20px;
+    border-radius: 10px;
+}
+
+#register #register-form .input input:focus{
+    outline: none;
 }
 
 #register #register-form .submit{
@@ -47,4 +52,9 @@ body{
     border: 1px solid #9a9b9c;
     border-radius: 5px;
     color: whitesmoke;
+}
+
+p{
+    width: 100%;
+    text-align: center;
 }

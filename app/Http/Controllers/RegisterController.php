@@ -15,8 +15,8 @@ class RegisterController extends Controller
         User::create(request()->validate([
             'username' => 'required|unique:users,username|max:20|min:3|regex:/^[A-Za-z]-*[\w]/',
             'email' => 'required|unique:users,email|email:rfc,dns',
-            'password' => 'required|min:7',
-            'password_confirmation' => 'required|confirmed'
+            'password' => 'required|min:7|confirmed',
+            'password_confirmation' => 'required'
         ]));
  
         return redirect('/')->with('success', 'Bienvenido a las tierras brancanienses!');
