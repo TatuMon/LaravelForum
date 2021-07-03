@@ -2,10 +2,6 @@ body{
     background-color: #000000;
 }
 
-#logo{
-    margin: auto;
-}
-
 #session{
     display: flex;
     flex-direction: column;
@@ -16,6 +12,10 @@ body{
     color: whitesmoke;
     padding: 20px;
     margin: 100px auto;
+}
+
+#session #logo{
+    margin: auto;
 }
 
 #session h1{

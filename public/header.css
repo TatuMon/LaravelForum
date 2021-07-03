@@ -89,5 +89,20 @@ header .github{
 }
 
 header .user{
-    margin-right: 50px
+    margin-right: 50px;
+}
+
+.username{
+    font-size: 30px;
+    margin-right: 2vw;
+}
+
+#logout{
+    display: inline-block;
+}
+
+#logout button{
+    background: none;
+    border: none;
+    color: whitesmoke;
 }

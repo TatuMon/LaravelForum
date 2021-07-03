@@ -26,9 +26,10 @@
             <button><a href="/login">LogIn</a></button>
             <button><a href="/register">SignUp</a></button>
         @else
-            <form method="POST" action="/logout">
+            <span class="username">{{ auth()->user()->username }}</span>
+            <form method="POST" action="/logout" id="logout">
                 @csrf
-                <button type="submit">LogOut</button>
+                <button type="submit"><i class="fas fa-sign-out-alt"></i>logout</button>
             </form>
         @endguest
     </div>

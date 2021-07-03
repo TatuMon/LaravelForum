@@ -32,5 +32,7 @@ Route::get('usr/{user:username}', [UserController::class, 'found'])->name('usr')
 Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'submitData'])->middleware('guest');
 
-Route::get('/login', [SessionController::class, 'index']);
-Route::post('/logout', [SessionController::class, 'destroy']);
+Route::get('/login', [SessionController::class, 'index'])->middleware('guest');
+Route::post('/login', [SessionController::class, 'login'])->middleware('guest');
+
+Route::post('/logout', [SessionController::class, 'destroy'])->middleware('auth');
