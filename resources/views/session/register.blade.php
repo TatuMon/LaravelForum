@@ -7,6 +7,7 @@
 <body>
     <section id="session">
         <h1>Registration</h1>
+        <a id="logo"><img src="{{asset('image/branca-logo.png')}}"></a>
         <form method="POST" action="/register" id="session-form">
             @csrf
             <div class="input first">
