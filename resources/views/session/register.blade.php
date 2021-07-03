@@ -1,13 +1,13 @@
 <head>
     <title>Registration</title>
 
-    <link rel="stylesheet" href="/register.css">
+    <link rel="stylesheet" href="/session.css">
 </head>
 
 <body>
-    <section id="register">
+    <section id="session">
         <h1>Registration</h1>
-        <form method="POST" action="/register" id="register-form">
+        <form method="POST" action="/register" id="session-form">
             @csrf
             <div class="input first">
                 <label for="username">username</label>
