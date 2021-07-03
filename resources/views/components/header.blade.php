@@ -22,7 +22,13 @@
     <i class="fab fa-github github"></i>
 
     <div class="user">
-        <button>LogIn</button>
-        <button><a href="/register">SignUp</a></button>
+        @guest
+            <button><a href="/login">LogIn</a></button>
+            <button><a href="/register">SignUp</a></button>
+        @else
+            <form method="POST" action="/logout">
+                <button type="submit">LogOut</button>
+            </form>
+        @endguest
     </div>
 </header>

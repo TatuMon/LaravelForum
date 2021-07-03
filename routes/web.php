@@ -28,6 +28,7 @@ Route::get('comm/{community:slug}', [CommunityController::class, 'search'])->nam
 
 Route::get('usr/{user:username}', [UserController::class, 'found'])->name('usr');
 
-Route::get('/register', [RegisterController::class, 'register'])->name('register');
+Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'submitData'])->middleware('guest');
 
-Route::post('/register', [RegisterController::class, 'submitData'])->name('submitData');
+Route::post('/logout', [SessionController::class, 'destroy']);
