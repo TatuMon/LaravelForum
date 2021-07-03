@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class RegisterController extends Controller
 {
     public function register(){
-        return view('register.register');
+        return view('session.register');
     }
 
     public function submitData(){
@@ -21,6 +21,6 @@ class RegisterController extends Controller
         ]));
  
         Auth::login($user);
-        return redirect('/')->with('success', 'Bienvenido a las tierras brancanienses!');
+        return redirect('/')->with('success', 'Welcome to the brancanience lands!');
     }
 }

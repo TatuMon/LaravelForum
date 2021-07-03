@@ -27,6 +27,7 @@
             <button><a href="/register">SignUp</a></button>
         @else
             <form method="POST" action="/logout">
+                @csrf
                 <button type="submit">LogOut</button>
             </form>
         @endguest

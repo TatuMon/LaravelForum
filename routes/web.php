@@ -4,6 +4,7 @@ use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionController;
 use App\Models\Community;
 use \App\Models\Post;
 use \App\Models\User;
@@ -31,4 +32,5 @@ Route::get('usr/{user:username}', [UserController::class, 'found'])->name('usr')
 Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'submitData'])->middleware('guest');
 
+Route::get('/login', [SessionController::class, 'index']);
 Route::post('/logout', [SessionController::class, 'destroy']);
