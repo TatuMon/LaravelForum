@@ -23,8 +23,8 @@
 
     <div class="user">
         @guest
-            <button><a href="/login">LogIn</a></button>
-            <button><a href="/register">SignUp</a></button>
+            <button class="log"><a href="/login">LogIn</a></button>
+            <button class="log"><a href="/register">SignUp</a></button>
         @else
             <span class="username">{{ auth()->user()->username }}</span>
             <form method="POST" action="/logout" id="logout">

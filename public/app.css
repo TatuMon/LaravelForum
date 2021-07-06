@@ -67,7 +67,7 @@ article a{
 .success{
     position: fixed;
     bottom: 10px;
-    left: 25%;
+    right: 50px;
     border-radius: 10px;
     background-color: #008F39;
     text-align: center;

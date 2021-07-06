@@ -89,7 +89,18 @@ header .github{
 }
 
 header .user{
-    margin-right: 50px;
+    margin-right: auto;
+}
+
+header .user .log{
+    background: none;
+    border: 1.5px solid #9a9b9c;
+    border-radius: 5px;
+    font-size: 23px;
+}
+
+header .user .log a{
+    color: whitesmoke;
 }
 
 .username{
