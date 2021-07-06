@@ -61,6 +61,7 @@ header .community-filter .communities-menu div a{
     display: inline-block;
     width: 100%;
     text-align: center;
+    color: whitesmoke;
 }
 
 header .user-search-bar{
