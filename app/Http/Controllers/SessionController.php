@@ -19,6 +19,8 @@ class SessionController extends Controller
         ]);
 
         if(Auth::attempt($credentials)){
+            session()->regenerate();
+
             return redirect('/')->with('success', 'Welcome back!');
         }
 
