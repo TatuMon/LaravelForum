@@ -53,18 +53,18 @@ article:hover{
     margin-bottom: 0;
 }
 
-.post-info span{
+.info span{
     font-size: 17px;
     color: #9a9b9c
 }
 
-.post-info a{
+.info a{
     font-size: 17px;
     text-decoration: none;
     color: #9a9b9c;
 }
 
-.post-info a:hover{
+.info a:hover{
     text-decoration: underline !important;
 }
 

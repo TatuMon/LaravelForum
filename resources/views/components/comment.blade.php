@@ -1,7 +1,7 @@
 @props(['comment'])
 
 <section class="comment-box">
-    <div>
+    <div class="info">
         <span><img src="https://i.pravatar.cc/45" alt="" class="user-logo"></span>
         <span><a class="user_name" href="/usr/{{ $comment->user->slug }}">{{ $comment->user->username }}</a></span>
         <span>•</span>
