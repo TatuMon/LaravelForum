@@ -1,0 +1,17 @@
+.comment-box{
+    border-left: 3px solid #9a9b9c;
+    padding-left: 10px;
+    line-height: normal;
+}
+
+.user-logo{
+    border-radius: 50%;
+}
+
+.respond{
+    color:whitesmoke;
+    background: none;
+    border: 1.5px solid #9a9b9c;
+    border-radius: 5px;
+    font-size: 20px;
+}
