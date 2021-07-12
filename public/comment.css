@@ -15,6 +15,10 @@
     color: whitesmoke;
 }
 
+.comment-creator::placeholder{
+    color: #999a9b
+}
+
 .submit-comment{
     background: none; 
     border-radius: 5px;

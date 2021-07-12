@@ -6,7 +6,8 @@
     @endauth
     
     <form method="POST" action="postComment">
-        <textarea name="content" class="comment-creator"></textarea>
+        @csrf
+        <textarea name="content" class="comment-creator" placeholder="What are you thoughts?"></textarea>
         <button type="submit" class="submit-comment">comment</button>
     </form>
 </div>
