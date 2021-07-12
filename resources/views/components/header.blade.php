@@ -1,4 +1,4 @@
-@props(['comms']);
+@props(['comms'])
 
 <header>
     <div class="logo">
@@ -23,8 +23,8 @@
 
     <div class="user">
         @guest
-            <button class="log"><a href="/login">LogIn</a></button>
-            <button class="log"><a href="/register">SignUp</a></button>
+            <a href="/login"><button class="log">LogIn</button></a>
+            <a href="/register"><button class="log">SignUp</button></a>
         @else
             <span class="username">{{ auth()->user()->username }}</span>
             <form method="POST" action="/logout" id="logout">
