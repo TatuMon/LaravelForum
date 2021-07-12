@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\CommentController;
 use App\Models\Community;
 use \App\Models\Post;
 use \App\Models\User;
@@ -36,3 +37,5 @@ Route::get('/login', [SessionController::class, 'index'])->middleware('guest');
 Route::post('/login', [SessionController::class, 'login'])->middleware('guest');
 
 Route::post('/logout', [SessionController::class, 'destroy'])->middleware('auth');
+
+Route::post('/postComment', [CommentController::class, 'post']);
