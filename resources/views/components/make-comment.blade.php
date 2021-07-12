@@ -5,6 +5,8 @@
         <span class="comment-as">Login to comment</span>
     @endauth
     
-    <textarea class="comment-creator">
-    </textarea>
+    <form method="POST" action="postComment">
+        <textarea name="content" class="comment-creator"></textarea>
+        <button type="submit" class="submit-comment">comment</button>
+    </form>
 </div>

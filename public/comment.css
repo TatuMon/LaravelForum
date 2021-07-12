@@ -10,9 +10,19 @@
     width: 100%;
     background-color: #3A3A3C;
     border-radius: 5px;
+    border: 1px solid whitesmoke;
     min-height: 150px;
     color: whitesmoke;
-    padding: 5px;
+}
+
+.submit-comment{
+    background: none; 
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+    float: right;
+    margin-right: 10px;
+    color: whitesmoke;
+    font-size: 20px;
 }
 
 .comment-box{
