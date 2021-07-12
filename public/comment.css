@@ -11,6 +11,8 @@
     background-color: #3A3A3C;
     border-radius: 5px;
     min-height: 150px;
+    color: whitesmoke;
+    padding: 5px;
 }
 
 .comment-box{
