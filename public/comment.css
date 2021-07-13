@@ -30,6 +30,7 @@
 }
 
 .comment-box{
+    margin-top: 20px;
     border-left: 3px solid #9a9b9c;
     padding-left: 10px;
     line-height: normal;

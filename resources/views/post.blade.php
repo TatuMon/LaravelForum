@@ -11,7 +11,7 @@
         <h1>{{ $post->title }}</h1>
         <p>{!! $post->body !!}</p>
 
-        <x-make-comment />
+        <x-make-comment :post="$post"/>
 
         @if(count($comments))
             @foreach($comments as $comment)

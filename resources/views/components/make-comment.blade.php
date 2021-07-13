@@ -1,3 +1,5 @@
+@props(['post'])
+
 <div class="comment-creator-box">
     @auth
         <span class="comment-as">Comment as <span style="color: #33a8ff">{{ auth()->user()->username }}</span></span>
@@ -5,9 +7,11 @@
         <span class="comment-as">Login to comment</span>
     @endauth
     
-    <form method="POST" action="postComment">
+    <form method="POST" action="/post/{{ $post->slug }}/comment">
         @csrf
         <textarea name="content" class="comment-creator" placeholder="What are you thoughts?"></textarea>
-        <button type="submit" class="submit-comment">comment</button>
+        @auth
+            <button type="submit" class="submit-comment">comment</button>    
+        @endauth
     </form>
 </div>

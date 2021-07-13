@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class SessionController extends Controller
 {
     public function index(){
+        session(['link' => url()->previous()]);
         return view('session.login');
     }
 
@@ -21,7 +22,7 @@ class SessionController extends Controller
         if(Auth::attempt($credentials)){
             session()->regenerate();
 
-            return redirect('/')->with('success', 'Welcome back!');
+            return redirect(session('link'))->with('success', 'Welcome back!');
         }
 
         throw ValidationException::withMessages([
@@ -32,6 +33,6 @@ class SessionController extends Controller
     public function destroy(){
         Auth::logout();
 
-        return redirect('/')->with('success', 'See you soon!');
+        return back()->with('success', 'See you soon!');
     }
 }
