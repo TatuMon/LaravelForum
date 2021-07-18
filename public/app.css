@@ -78,6 +78,19 @@ article a{
     font-weight: lighter;
 }
 
+#subscribe{
+    text-align: center;
+    margin: 20px auto;
+    width: 15vw;
+}
+
+.newsletter{
+    border: 1.5px solid #9a9b9c;
+    background: none;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
 .success{
     position: fixed;
     bottom: 10px;
@@ -90,5 +103,20 @@ article a{
 }
 
 .success p{
+    margin: 0;
+}
+
+.error{
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
+    border-radius: 10px;
+    background-color: #df4759;
+    text-align: center;
+    padding: 30px;
+    cursor: default;
+}
+
+.error p{
     margin: 0;
 }

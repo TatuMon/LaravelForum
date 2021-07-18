@@ -39,7 +39,7 @@
                 <input name="password" id="password" type="password" required>
             </div>
 
-            <input class="submit" type="submit" value="SUBMIT">
+            <input class="submit" type="submit" value="SUBMIT" style="cursor: pointer">
         
             <x-user-form/>
         </form>

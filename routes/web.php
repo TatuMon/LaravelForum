@@ -6,9 +6,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\CommentController;
-use App\Models\Community;
-use \App\Models\Post;
-use \App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +18,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('newsletter', function(){
+    $client = new MailchimpMarketing\ApiClient();
+    $client->setConfig([
+        'apiKey' => config('services.mailchimp.key'),
+        'server' => 'us6',
+    ]);
+
+    $response = $client->lists->addListMember('f61a87042a', [
+        'email_address' => auth()->user()->email,
+        'status' => 'subscribed'
+    ]);
+    
+    return back()->with('success', "We'll keep you updated from now on");
+});
 
 Route::get('/', [PostController::class, 'search'])->name('home');
 

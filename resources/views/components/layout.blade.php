@@ -41,7 +41,12 @@
         <div id="main-container" class="main-container">
             {{ $slot }}
         </div>
-
+        <div id="subscribe">
+            @auth
+            <a href="/newsletter"><button class="newsletter">Send information about new updates to my email</button></a>
+            @endauth
+        </div>
         <x-session-success />
+        <x-subscribe-error />
     </body>
 </html>
