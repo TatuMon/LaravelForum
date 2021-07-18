@@ -47,5 +47,6 @@
             @endauth
         </div>
         <x-session-success />
+        <x-session-error/>
     </body>
 </html>
