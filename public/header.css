@@ -102,9 +102,20 @@ header .user a .log{
     color: whitesmoke;
 }
 
+#usr-dropdown{
+    display: inline-block;
+}
+
 .username{
     font-size: 30px;
     margin-right: 2vw;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.usr-options{
+    position: absolute;
 }
 
 #logout{
