@@ -30,6 +30,8 @@ Route::get('/comm/{community:slug}', [CommunityController::class, 'search'])->na
 Route::get('/newsletter', NewsletterController::class);
 
 Route::get('/usr/{user:username}', [UserController::class, 'found'])->name('usr');
+Route::get('/change-pic', [UserController::class, 'changer']);
+Route::post('/changePic', [UserController::class, 'changePic']);
 
 Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'submitData'])->middleware('guest');

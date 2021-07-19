@@ -2,7 +2,7 @@
     <x-slot name="title">{{ $post->title }} : {{ $post->community->name }}</x-slot>
 
     <article>
-        <div class="info">
+        <div class="post-info">
             <span><a class="community_name" href="/comm/{{ $post->community->slug }}">comm/{{ $post->community->name }}</a></span>
             <span>•</span>
             <span>posted by <a class="user_name" href="/usr/{{ $post->user->slug }}">{{ $post->user->username }}</a></span>
