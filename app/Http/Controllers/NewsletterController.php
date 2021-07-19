@@ -13,8 +13,9 @@ class NewsletterController extends Controller
         try{
             $newsletter->subscribe();
         } catch(Exception $e) {
-            throw $e;
+            return back()->with('error', 'Your email is invalid or already subscribed');
         }
         
+        return back()->with('success', "We'll keep you updated from now on");
     }
 }
