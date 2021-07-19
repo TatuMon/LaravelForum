@@ -32,6 +32,8 @@ Route::get('/newsletter', NewsletterController::class);
 Route::get('/usr/{user:username}', [UserController::class, 'found'])->name('usr');
 Route::get('/change-pic', [UserController::class, 'changer']);
 Route::post('/changePic', [UserController::class, 'changePic']);
+Route::post('/ban', [UserController::class, 'ban']);
+Route::post('/unban', [UserController::class, 'unban']);
 
 Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'submitData'])->middleware('guest');

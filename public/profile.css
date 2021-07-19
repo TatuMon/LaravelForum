@@ -1,5 +1,4 @@
 #main-info{
-    width: 100%;
     display: flex;
     align-items: center;
     margin-left: 50px;
@@ -23,4 +22,28 @@
 .prof-role{
     font-size: 25px;
     margin-top: 0px;
+}
+
+#options{
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+#options .admin{
+    margin-top: 20px;
+    background: none;
+    border: 1.5px solid #9a9b9c;
+    border-radius: 5px;
+    font-size: 23px;
+    color: whitesmoke;
+}
+
+#options .danger{
+    margin-top: 0px;
+    background: none;
+    border: 2px solid #df4759;
+    border-radius: 5px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #df4759;
 }

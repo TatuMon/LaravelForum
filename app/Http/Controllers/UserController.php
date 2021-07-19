@@ -36,4 +36,20 @@ class UserController extends Controller
 
         return redirect('/')->with('success', 'Profile picture successfuly updated');
     }
+
+    public function ban(){
+        $userToBan = request('user');
+
+        User::where('id', $userToBan)->update(['role' => 'BANNED']);
+
+        return back()->with('success', 'User successfuly banned');
+    }
+
+    public function unban(){
+        $userToUnban = request('user');
+
+        User::where('id', $userToUnban)->update(['role' => 'Branca Soldier']);
+
+        return back()->with('success', 'User successfuly unbanned');
+    }
 }
