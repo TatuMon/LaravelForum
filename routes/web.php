@@ -32,6 +32,7 @@ Route::get('/newsletter', NewsletterController::class);
 Route::get('/usr/{user:username}', [UserController::class, 'found'])->name('usr');
 Route::get('/change-pic', [UserController::class, 'changer']);
 Route::post('/changePic', [UserController::class, 'changePic']);
+Route::post('/giveRol', [UserController::class, 'giveRol']);
 Route::post('/ban', [UserController::class, 'ban']);
 Route::post('/unban', [UserController::class, 'unban']);
 

@@ -4,10 +4,16 @@
     margin-left: 50px;
 }
 
+#prof-title{
+    display: flex;
+    align-items: center;
+}
+
 #profile-pic{
     width: 80px;
+    margin-right: 10px;
     border-radius: 50%;
-    margin: auto 10px;
+    border: 2px solid whitesmoke;
 }
 
 .prof-usr{
@@ -38,7 +44,32 @@
     color: whitesmoke;
 }
 
+#give-rol-form{
+    position: relative;
+}
+
+.admin{
+    height: 40px;
+}
+
+.admin option{
+    background-color: #000000;
+    color: whitesmoke;
+}
+
+#give-rol{
+    height: 40px;
+    margin-top: 20px;
+    background: none;
+    border: 1.5px solid #9a9b9c;
+    border-radius: 5px;
+    font-size: 23px;
+    color: whitesmoke;
+    position: absolute;
+}
+
 #options .danger{
+    height: 40px;
     margin-top: 0px;
     background: none;
     border: 2px solid #df4759;

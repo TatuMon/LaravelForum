@@ -27,7 +27,7 @@ html::-webkit-scrollbar-thumb:hover{
 }
 
 .main-container{
-    margin-top: 125px;
+    margin-top: 100px;
 }
 
 .no_posts_alert{
@@ -35,8 +35,25 @@ html::-webkit-scrollbar-thumb:hover{
     text-align: center;
 }
 
-article{
+#up-container{
     width: 60vw;
+    margin: auto;
+}
+
+.usr-card{
+    width: 100%;
+    margin-bottom: 50px; 
+    display: flex;
+    align-items: center;
+}
+
+.usr-card a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+article{
+    width: 100%;
     margin: 10px auto;
     padding: 0px 20px;
     padding-bottom: 20px;

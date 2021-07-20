@@ -37,6 +37,17 @@ class UserController extends Controller
         return redirect('/')->with('success', 'Profile picture successfuly updated');
     }
 
+    public function giveRol(){
+        $data = request()->validate([
+            'user' => 'required|exists:users,id',
+            'role' => 'required'
+        ]);
+
+        User::where('id', $data['user'])->update(['role' => $data['role']]);
+
+        return back()->with('success', "User's role successfuly updated");
+    }
+
     public function ban(){
         $userToBan = request('user');
 
