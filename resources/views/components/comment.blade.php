@@ -8,5 +8,4 @@
         <span>{{ $comment->created_at->diffForHumans() }}</span>
     </div>
     <p>{{ $comment->content }}</p>
-    <a href="/respond"><button class="respond">respond</button></a>
 </section>

@@ -91,6 +91,36 @@ article a{
     color: whitesmoke !important;
 } 
 
+.danger{
+    float: right;
+    border: 2px solid #df4759;
+    border-radius: 5px;
+    color: #df4759 !important;
+    background: none;
+    padding: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+#delete-post{
+    width: 40vw;
+    height: 270px;
+    text-align: center;
+    background-color: #000000;
+    border: 5px solid #df4759;
+    border-radius: 5px;
+    margin: auto;
+    padding: 20px;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+#delete-post .danger{
+    float:none;
+    margin: auto;
+}
+
+
 .community_name{
     margin: 0;
     font-weight: lighter;

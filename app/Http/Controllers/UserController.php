@@ -43,7 +43,7 @@ class UserController extends Controller
             'role' => 'required'
         ]);
 
-        User::where('id', $data['user'])->update(['role' => $data['role']]);
+        User::findOrFail($data['user'])->update(['role' => $data['role']]);
 
         return back()->with('success', "User's role successfuly updated");
     }

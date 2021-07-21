@@ -24,4 +24,14 @@ class PostController extends Controller
             'comments' => $post->comments
         ]);
     }
+
+    public function delete(){
+        $data = request()->validate([
+            'post' => 'exists:posts,id'
+        ]);
+
+        Post::findOrFail($data['post'])->delete();
+
+        return redirect('/')->with('success', 'Post successfuly deleted');
+    }
 }
