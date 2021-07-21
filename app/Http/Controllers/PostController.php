@@ -25,6 +25,14 @@ class PostController extends Controller
         ]);
     }
 
+    public function creator(){
+        return view('post-creator');
+    }
+
+    public function create(){
+        
+    }
+
     public function delete(){
         $data = request()->validate([
             'post' => 'exists:posts,id'

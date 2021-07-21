@@ -52,6 +52,21 @@ html::-webkit-scrollbar-thumb:hover{
     color: whitesmoke;
 }
 
+.btn{
+    display: block;
+    border: 1.5px solid #9a9b9c;
+    background: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    width: 90%;
+    margin: auto;
+}
+
+.btn:hover{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 article{
     width: 100%;
     margin: 10px auto;
@@ -119,7 +134,6 @@ article a{
     float:none;
     margin: auto;
 }
-
 
 .community_name{
     margin: 0;
