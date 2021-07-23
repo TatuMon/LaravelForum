@@ -26,7 +26,9 @@ class PostController extends Controller
     }
 
     public function creator(){
-        return view('post-creator');
+        return view('post-creator', [
+            'comms' => Community::select('id', 'name', 'slug')->get()
+        ]);
     }
 
     public function create(){

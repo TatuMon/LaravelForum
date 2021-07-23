@@ -26,6 +26,7 @@ Route::get('/', [PostController::class, 'search'])->name('home');
 
 Route::get('/post/{post:slug}', [PostController::class, 'found'])->name('post');
 Route::get('/create-post', [PostController::class, 'creator'])->middleware('auth');
+Route::post('/create', [PostController::class, 'create'])->middleware('auth');
 Route::post('/delete', [PostController::class, 'delete']);
 Route::get('/comm/{community:slug}', [CommunityController::class, 'search'])->name('comm');
 
