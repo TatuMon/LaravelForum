@@ -35,7 +35,7 @@ class PostController extends Controller
     public function create(){
         $data = request()->validate([
             'comm' => 'required|exists:communities,id',
-            'title' => 'required|max:50',
+            'title' => 'required|max:50|regex:/[\w\d\s]/|unique:posts',
             'body' => 'required'
         ]);
 

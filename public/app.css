@@ -212,6 +212,12 @@ article a{
     color: whitesmoke;
 }
 
+#post-form .error-msg{
+    margin-top: 10px;
+    text-align: center;
+    color: #df4759;
+}
+
 .success{
     position: fixed;
     bottom: 10px;

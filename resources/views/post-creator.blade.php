@@ -22,15 +22,15 @@
                 <input type="submit" value="Submit post"/>
 
                 @error('comm')
-                    <p>{{ $message }}</p>
+                    <p class="error-msg">{{ $message }}</p>
                 @enderror
 
                 @error('title')
-                    <p>{{ $message }}</p>
+                    <p class="error-msg">{{ $message }}</p>
                 @enderror
 
                 @error('body')
-                    <p>{{ $message }}</p>
+                    <p class="error-msg">{{ $message }}</p>
                 @enderror
             </form>
         </section>
