@@ -14,12 +14,24 @@
                 </select>
 
                 <label for="title">Title</label>
-                <input type="text" name="title" id="post-title" autocomplete="off" required>
+                <input type="text" name="title" id="post-title" autocomplete="off" maxlength="50" required>
 
-                <label for="title">Body</label>
-                <textarea name="title" required></textarea>
+                <label for="body">Body</label>
+                <textarea name="body" required></textarea>
 
                 <input type="submit" value="Submit post"/>
+
+                @error('comm')
+                    <p>{{ $message }}</p>
+                @enderror
+
+                @error('title')
+                    <p>{{ $message }}</p>
+                @enderror
+
+                @error('body')
+                    <p>{{ $message }}</p>
+                @enderror
             </form>
         </section>
     </body>

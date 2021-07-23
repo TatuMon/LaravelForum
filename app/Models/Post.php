@@ -9,6 +9,8 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function scopeFilter($query, array $filters){
         $query->when($filters['search'] ?? false, fn() => $query->where('title', 'like', '%' . request('search') . '%')
         ->orWhere('body', 'like', '%' . request('search') . '%'));
@@ -25,6 +27,4 @@ class Post extends Model
     public function comments(){
         return $this->hasMany(Comment::class);
     }
-
-
 }
