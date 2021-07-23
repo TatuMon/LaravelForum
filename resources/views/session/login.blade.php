@@ -25,7 +25,7 @@
 
 <body>
     <section id="session">
-        <a id="logo"><img src="{{asset('image/branca-logo.png')}}"></a>
+        <a id="logo" href="/"><img src="{{asset('image/branca-logo.png')}}"></a>
         <h1>Log In</h1>
         <form method="POST" action="/login" id="session-form">
             @csrf
@@ -43,5 +43,6 @@
         
             <x-user-form/>
         </form>
+        <a href="/register" style="color: whitesmoke; text-align: center;">Or you can register</a>
     </section>
 </body>

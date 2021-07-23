@@ -41,7 +41,7 @@ Route::post('/unban', [UserController::class, 'unban'])->middleware('admin');
 Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'submitData'])->middleware('guest');
 
-Route::get('/login', [SessionController::class, 'index'])->middleware('guest');
+Route::get('/login', [SessionController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [SessionController::class, 'login'])->middleware('guest');
 Route::post('/logout', [SessionController::class, 'destroy'])->middleware('auth');
 

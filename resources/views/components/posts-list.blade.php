@@ -6,8 +6,9 @@
     @endforeach
 @endisset
 
+<a href="/create-post" class="btn">Create post</a> 
+
 @if(count($posts))
-    <a href="/create-post" class="btn">Create post</a> 
     @foreach($posts as $post)
         <x-post-card :post="$post" />
     @endforeach
