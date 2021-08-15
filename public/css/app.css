@@ -122,6 +122,7 @@ header .user .log {
   border: 1.5px solid #9a9b9c;
   border-radius: 5px;
   font-size: 23px;
+  color: whitesmoke;
 }
 header #usr-dropdown {
   display: inline-block;
@@ -146,6 +147,111 @@ header #logout button {
   background: none;
   border: none;
   color: whitesmoke;
+}
+
+.no_posts_alert {
+  display: block;
+  text-align: center;
+}
+
+#up-container {
+  width: 60vw;
+  margin: auto;
+}
+#up-container .usr-card {
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+#up-container .usr-card a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+#up-container .post-info span {
+  font-size: 17px;
+  color: #9a9b9c;
+}
+#up-container .post-info a {
+  font-size: 17px;
+  text-decoration: none;
+  color: #9a9b9c;
+}
+#up-container .post-info a:hover {
+  text-decoration: underline !important;
+}
+#up-container .post-info .community_name {
+  margin: 0;
+  font-weight: lighter;
+}
+
+article {
+  width: 100%;
+  margin: 10px auto;
+  padding: 0px 20px;
+  padding-bottom: 20px;
+  border: 1px solid #676869;
+  border-radius: 5px;
+  cursor: pointer;
+}
+article a {
+  text-decoration: none !important;
+  color: whitesmoke !important;
+}
+
+article:hover {
+  border: 1px solid #9a9b9c;
+}
+
+.comment-creator-box {
+  margin-bottom: 50px;
+}
+.comment-creator-box .comment-as {
+  font-size: 17px;
+}
+.comment-creator-box .comment-creator {
+  width: 100%;
+  background-color: #3A3A3C;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  min-height: 150px;
+  color: whitesmoke;
+}
+.comment-creator-box .comment-creator::-moz-placeholder {
+  color: #999a9b;
+}
+.comment-creator-box .comment-creator:-ms-input-placeholder {
+  color: #999a9b;
+}
+.comment-creator-box .comment-creator::placeholder {
+  color: #999a9b;
+}
+.comment-creator-box .submit-comment {
+  background: none;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  float: right;
+  margin-right: 10px;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.comment-box {
+  margin-top: 20px;
+  border-left: 3px solid #9a9b9c;
+  padding-left: 10px;
+  line-height: normal;
+}
+.comment-box .user-logo {
+  border-radius: 50%;
+  width: 50px;
+}
+.comment-box .respond {
+  color: whitesmoke;
+  background: none;
+  border: 1.5px solid #9a9b9c;
+  border-radius: 5px;
+  font-size: 20px;
 }
 
 body, html {
@@ -183,6 +289,20 @@ body, html {
 .btn:hover {
   text-decoration: none;
   color: whitesmoke;
+}
+
+.danger {
+  float: right;
+  border: 2px solid #df4759;
+  border-radius: 5px;
+  color: #df4759 !important;
+  background: none;
+  padding: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
 }
 
 .main-container {

@@ -4,6 +4,7 @@
 @import "session-error";
 @import "header.scss";
 @import "posts.scss";
+@import "comment.scss";
 
 body, html{
     margin: 0;
@@ -40,6 +41,17 @@ body, html{
 .btn:hover{
     text-decoration: none;
     color: whitesmoke;
+}
+
+.danger{
+    float: right;
+    border: 2px solid #df4759;
+    border-radius: 5px;
+    color: #df4759 !important;
+    background: none;
+    padding: 5px;
+    user-select: none;
+    cursor: pointer;
 }
 
 .main-container{
