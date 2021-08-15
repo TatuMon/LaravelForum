@@ -31,17 +31,17 @@
             @csrf
             <div class="input first">
                 <label for="username">username</label>
-                <input name="username" id="username" type="text" value="{{ old('username') }}" required>
+                <input name="username" id="username" type="text" value="{{ old('username') }}" autocomplete="username" required>
             </div>
 
             <div class="input">
                 <label for="email">e-mail</label>
-                <input name="email" id="email" type="email" value="{{ old('email') }}" required>
+                <input name="email" id="email" type="email" value="{{ old('email') }}" autocomplete="email" required>
             </div>
 
             <div class="input">
                 <label for="password">password</label>
-                <input name="password" id="password" type="password" required>
+                <input name="password" id="password" type="password" autocomplete="password" required>
             </div>
 
             <div class="input">

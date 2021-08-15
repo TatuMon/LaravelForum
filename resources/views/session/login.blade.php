@@ -31,7 +31,7 @@
             @csrf
             <div class="input first">
                 <label for="email">email</label>
-                <input name="email" id="email" type="text" value="{{ old('email') }}" required>
+                <input name="email" id="email" type="text" value="{{ old('email') }}" autocomplete="email" required>
             </div>
 
             <div class="input">
