@@ -1,0 +1,60 @@
+//Here goes ONLY the imports, the default app styling and the styling that would affect primarly the layout blade component
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import "session-success";
+@import "session-error";
+@import "header.scss";
+@import "posts.scss";
+
+body, html{
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 120%;
+    color: whitesmoke;
+    background-color: #000000;
+}
+
+*::-webkit-scrollbar{
+    width: 10px;
+    background-color: #222222;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: #9a9b9c;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover{
+    background-color: #676869;
+}
+
+.btn{
+    display: block;
+    border: 1.5px solid #9a9b9c;
+    background: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    width: 90%;
+    margin: auto;
+}
+
+.btn:hover{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.main-container{
+    margin-top: 100px;
+}
+
+#subscribe{
+    text-align: center;
+    margin: 20px auto;
+    width: 15vw;
+
+    .newsletter{
+        border: 1.5px solid #9a9b9c;
+        background: none;
+        border-radius: 5px;
+        color: whitesmoke;
+    }
+}
