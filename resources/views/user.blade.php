@@ -11,7 +11,7 @@
         
         @auth
             <div id="options">
-                @if(auth()->user()->role == "Black Hand of Branca" && $user->id != 7)
+                @if(auth()->user()->role == "Black Hand of Branca")
                     <!-- Open dropdown menu with a list of the available roles -->
                     <form method="POST" action="/giveRol" x-data="{showbtn : false, showusr : false}" id="give-rol-form">
                         @csrf

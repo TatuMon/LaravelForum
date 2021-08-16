@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import "session-success";
 @import "session-error";
-@import "header.scss";
-@import "posts.scss";
-@import "comment.scss";
+@import "session";
+@import "header";
+@import "posts";
+@import "user";
+@import "comment";
+@import "profile";
 
 body, html{
     margin: 0;

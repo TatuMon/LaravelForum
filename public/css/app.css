@@ -27,6 +27,64 @@
   margin: 0;
 }
 
+body {
+  background-color: #000000;
+  font-family: "Roboto";
+}
+
+#session {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  background-color: #1A1A1B;
+  border: 3px solid #676869;
+  border-radius: 10px;
+  color: whitesmoke;
+  padding: 20px;
+  margin: 100px auto;
+}
+#session #logo {
+  margin: auto;
+}
+#session h1 {
+  text-align: center;
+}
+#session #session-form {
+  display: flex;
+  flex-direction: column;
+}
+#session #session-form .input {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+#session #session-form .input input {
+  height: 45px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+#session #session-form .input input:focus {
+  outline: none;
+}
+#session #session-form .submit {
+  width: 40%;
+  height: 40px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #3A3A3C;
+  border: 1px solid #9a9b9c;
+  border-radius: 5px;
+  color: whitesmoke;
+}
+#session p {
+  width: 100%;
+  text-align: center;
+}
+
 header {
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -158,16 +216,6 @@ header #logout button {
   width: 60vw;
   margin: auto;
 }
-#up-container .usr-card {
-  width: 100%;
-  margin-bottom: 50px;
-  display: flex;
-  align-items: center;
-}
-#up-container .usr-card a {
-  text-decoration: none;
-  color: whitesmoke;
-}
 #up-container .post-info span {
   font-size: 17px;
   color: #9a9b9c;
@@ -201,6 +249,23 @@ article a {
 
 article:hover {
   border: 1px solid #9a9b9c;
+}
+
+.usr-card {
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+.usr-card #profile-pic {
+  width: 80px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid whitesmoke;
+}
+.usr-card a {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 .comment-creator-box {
@@ -252,6 +317,74 @@ article:hover {
   border: 1.5px solid #9a9b9c;
   border-radius: 5px;
   font-size: 20px;
+}
+
+#main-info {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+#main-info #prof-title {
+  display: flex;
+  align-items: center;
+}
+#main-info #prof-title #profile-pic {
+  width: 80px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid whitesmoke;
+}
+#main-info #prof-title .prof-usr {
+  font-size: 50px;
+  margin-bottom: 0px;
+}
+#main-info #prof-title .usr-tag {
+  font-size: 25px;
+}
+#main-info #prof-title .prof-role {
+  font-size: 25px;
+  margin-top: 0px;
+}
+#main-info #options {
+  margin-left: auto;
+  margin-right: 100px;
+}
+#main-info #options .admin {
+  margin-top: 20px;
+  background: none;
+  border: 1.5px solid #9a9b9c;
+  border-radius: 5px;
+  font-size: 23px;
+  color: whitesmoke;
+  height: 40px;
+}
+#main-info #options .admin option {
+  background-color: #000000;
+  color: whitesmoke;
+}
+#main-info #options #give-rol-form {
+  position: relative;
+}
+#main-info #options #give-rol {
+  height: 40px;
+  margin-top: 20px;
+  background: none;
+  border: 1.5px solid #9a9b9c;
+  border-radius: 5px;
+  font-size: 23px;
+  color: whitesmoke;
+  position: absolute;
+}
+#main-info #options .danger {
+  height: 40px;
+  line-height: 0px;
+  margin-top: 0px;
+  background: none;
+  border: 2px solid #df4759;
+  border-radius: 5px;
+  font-size: 23px;
+  font-weight: bold;
+  color: #df4759;
 }
 
 body, html {
