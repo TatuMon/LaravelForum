@@ -31,7 +31,7 @@
             @csrf
             <div class="input first">
                 <label for="username">username</label>
-                <input name="username" id="username" type="text" value="{{ old('username') }}" autocomplete="username" required>
+                <input name="username" id="username" type="text" value="{{ old('username') }}" maxlength="12" autocomplete="username" required>
             </div>
 
             <div class="input">
