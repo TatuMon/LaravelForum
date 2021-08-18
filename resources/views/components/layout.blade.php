@@ -38,7 +38,15 @@
     <body>
         <x-header :comms="$comms"/>
         <div id="main-container" class="main-container">
-            {{ $slot }}
+            @auth
+                @if (auth()->user()->role == "BANNED")
+                    <p style="text-align: center">You are BANNED</p>
+                @else
+                    {{ $slot }}
+                @endif
+            @else
+                {{ $slot }}
+            @endauth
         </div>
         <div id="subscribe">
             @auth

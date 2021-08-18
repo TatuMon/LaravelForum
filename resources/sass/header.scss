@@ -108,7 +108,8 @@ header{
         position: relative;
         cursor: pointer;
         user-select: none;
-        max-width: 100px;
+        text-overflow: ellipsis;
+        display: block;
     }
 
     .usr-options{

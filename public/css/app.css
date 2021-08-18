@@ -194,7 +194,8 @@ header .username {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  max-width: 100px;
+  text-overflow: ellipsis;
+  display: block;
 }
 header .usr-options {
   position: absolute;
