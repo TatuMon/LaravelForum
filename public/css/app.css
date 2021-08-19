@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap);
 .success {
   position: fixed;
   bottom: 10px;
@@ -387,6 +388,53 @@ article:hover {
   font-size: 23px;
   font-weight: bold;
   color: #df4759;
+}
+
+#comm-info {
+  width: 15vw;
+  background: none;
+  border: 2px solid #9a9b9c;
+  border-radius: 5px;
+}
+#comm-info input {
+  width: 100%;
+  background-color: #3A3A3C;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  min-height: 150px;
+  color: whitesmoke;
+}
+
+body {
+  font-family: "Roboto";
+  background-color: #000000;
+}
+
+#creator {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #1A1A1B;
+  border: 3px solid #676869;
+  border-radius: 10px;
+  color: whitesmoke;
+  padding: 20px;
+  margin: 100px auto;
+}
+#creator h1 {
+  text-align: center;
+}
+#creator form {
+  display: flex;
+  flex-direction: column;
+}
+#creator form textarea {
+  width: 100%;
+  background-color: #3A3A3C;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  min-height: 150px;
+  color: whitesmoke;
 }
 
 body, html {

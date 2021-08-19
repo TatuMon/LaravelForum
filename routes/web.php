@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [PostController::class, 'search'])->name('home');
+Route::get('/', [PostController::class, 'main'])->name('home');
 
 Route::get('/post/{post:slug}', [PostController::class, 'found'])->name('post');
 Route::get('/create-post', [PostController::class, 'creator'])->middleware('auth');

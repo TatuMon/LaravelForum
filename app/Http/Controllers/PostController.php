@@ -10,10 +10,11 @@ use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
-    public function search(){
+    public function main(){
         return view('posts', [
             'posts' => Post::latest('published_at')->filter(request(['search']))->get()->sortDesc(),
             'comms' => Community::select('name', 'slug')->get(),
+            'actualComm' => Community::where('name', 'General')->withCount('posts')->first(),
             'usrs' => User::filter(request(['search']))->get()
         ]);
     }
