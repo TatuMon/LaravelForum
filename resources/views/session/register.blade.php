@@ -20,28 +20,28 @@
     <meta name="msapplication-TileImage" content="{{asset('favicon/ms-icon-144x144.png')}}">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/session.css">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
 <body>
     <section id="session">
         <h1>Registration</h1>
-        <a id="logo"><img src="{{asset('image/branca-logo.png')}}"></a>
+        <a id="logo" href="/"><img src="{{asset('image/branca-logo.png')}}"></a>
         <form method="POST" action="/register" id="session-form">
             @csrf
             <div class="input first">
                 <label for="username">username</label>
-                <input name="username" id="username" type="text" value="{{ old('username') }}" required>
+                <input name="username" id="username" type="text" value="{{ old('username') }}" maxlength="12" autocomplete="username" required>
             </div>
 
             <div class="input">
                 <label for="email">e-mail</label>
-                <input name="email" id="email" type="email" value="{{ old('email') }}" required>
+                <input name="email" id="email" type="email" value="{{ old('email') }}" autocomplete="email" required>
             </div>
 
             <div class="input">
                 <label for="password">password</label>
-                <input name="password" id="password" type="password" required>
+                <input name="password" id="password" type="password" autocomplete="password" required>
             </div>
 
             <div class="input">
@@ -53,5 +53,6 @@
         
             <x-user-form/>
         </form>
+        <a href="/login" style="color: whitesmoke; text-align: center">Or you can LogIn</a>
     </section>
 </body>

@@ -22,25 +22,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [PostController::class, 'search'])->name('home');
+Route::get('/', [PostController::class, 'main'])->name('home');
 
 Route::get('/post/{post:slug}', [PostController::class, 'found'])->name('post');
+Route::get('/create-post', [PostController::class, 'creator'])->middleware('auth');
+Route::post('/create', [PostController::class, 'create'])->middleware('auth');
+Route::post('/delete', [PostController::class, 'delete']);
 Route::get('/comm/{community:slug}', [CommunityController::class, 'search'])->name('comm');
 
-Route::get('/newsletter', NewsletterController::class);
+Route::get('/newsletter', NewsletterController::class)->middleware('auth');
 
 Route::get('/usr/{user:username}', [UserController::class, 'found'])->name('usr');
 Route::get('/change-pic', [UserController::class, 'changer']);
 Route::post('/changePic', [UserController::class, 'changePic']);
-Route::post('/giveRol', [UserController::class, 'giveRol']);
-Route::post('/ban', [UserController::class, 'ban']);
-Route::post('/unban', [UserController::class, 'unban']);
+Route::post('/giveRol', [UserController::class, 'giveRol'])->middleware('admin');
+Route::post('/ban', [UserController::class, 'ban'])->middleware('admin');
+Route::post('/unban', [UserController::class, 'unban'])->middleware('admin');
 
 Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'submitData'])->middleware('guest');
 
-Route::get('/login', [SessionController::class, 'index'])->middleware('guest');
+Route::get('/login', [SessionController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [SessionController::class, 'login'])->middleware('guest');
 Route::post('/logout', [SessionController::class, 'destroy'])->middleware('auth');
 
-Route::post('post/{post:slug}/comment', [CommentController::class, 'store']);
+Route::post('post/{post:slug}/comment', [CommentController::class, 'store'])->middleware('auth');

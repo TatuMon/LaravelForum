@@ -20,18 +20,18 @@
     <meta name="msapplication-TileImage" content="{{asset('favicon/ms-icon-144x144.png')}}">
     <meta name="theme-color" content="#ffffff">   
 
-    <link rel="stylesheet" href="/session.css">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
 <body>
     <section id="session">
-        <a id="logo"><img src="{{asset('image/branca-logo.png')}}"></a>
+        <a id="logo" href="/"><img src="{{asset('image/branca-logo.png')}}"></a>
         <h1>Log In</h1>
         <form method="POST" action="/login" id="session-form">
             @csrf
             <div class="input first">
                 <label for="email">email</label>
-                <input name="email" id="email" type="text" value="{{ old('email') }}" required>
+                <input name="email" id="email" type="text" value="{{ old('email') }}" autocomplete="email" required>
             </div>
 
             <div class="input">
@@ -43,5 +43,6 @@
         
             <x-user-form/>
         </form>
+        <a href="/register" style="color: whitesmoke; text-align: center;">Or you can register</a>
     </section>
 </body>
