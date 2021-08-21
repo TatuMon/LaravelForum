@@ -23,14 +23,29 @@ body{
     form{
         display: flex;
         flex-direction: column;
+
+        #post-title, select{
+            background-color: #3A3A3C;
+            border-radius: 5px;
+            border: 1px solid $border-light;
+            color: $font;
+        }
+
+        option{
+            color: $font;
+        }
     
         textarea{
             width: 100%;
             background-color: #3A3A3C;
             border-radius: 5px;
-            border: 1px solid whitesmoke;
+            border: 1px solid $border-light;
             min-height: 150px;
-            color: whitesmoke;
+            color: $font;
+        }
+
+        #submit{
+            margin-top: 10px;
         }
     }
 }

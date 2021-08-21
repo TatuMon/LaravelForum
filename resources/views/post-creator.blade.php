@@ -19,7 +19,7 @@
                 <label for="body">Body</label>
                 <textarea name="body" required></textarea>
 
-                <input type="submit" value="Submit post"/>
+                <input id="submit" type="submit" value="Submit post"/>
 
                 @error('comm')
                     <p class="error-msg">{{ $message }}</p>

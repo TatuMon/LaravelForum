@@ -7,5 +7,5 @@
         <span>•</span>
         <span>{{ $comment->created_at->diffForHumans() }}</span>
     </div>
-    <p>{{ $comment->content }}</p>
+    <p>{!! $comment->content !!}</p>
 </section>

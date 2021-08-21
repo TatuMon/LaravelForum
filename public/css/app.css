@@ -444,13 +444,25 @@ body {
   display: flex;
   flex-direction: column;
 }
+#creator form #post-title, #creator form select {
+  background-color: #3A3A3C;
+  border-radius: 5px;
+  border: 1px solid #9a9b9c;
+  color: whitesmoke;
+}
+#creator form option {
+  color: whitesmoke;
+}
 #creator form textarea {
   width: 100%;
   background-color: #3A3A3C;
   border-radius: 5px;
-  border: 1px solid whitesmoke;
+  border: 1px solid #9a9b9c;
   min-height: 150px;
   color: whitesmoke;
+}
+#creator form #submit {
+  margin-top: 10px;
 }
 
 body, html {

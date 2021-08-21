@@ -22,7 +22,7 @@ class PostController extends Controller
         return view('post', [
             'post' => $post,
             'comms' => Community::select('name', 'slug')->get(),
-            'comments' => $post->comments
+            'comments' => $post->comments->sortByDesc('created_at')
         ]);
     }
 
@@ -38,6 +38,10 @@ class PostController extends Controller
             'title' => 'required|max:50|regex:/[\w\d\s]/|unique:posts',
             'body' => 'required'
         ]);
+
+        $data['body'] = preg_replace('/\r/', '', $data['body']);
+        $data['content'] =  preg_replace('/\n{3,}/', '\n\n', preg_replace('/^\s+$/m', '', $data['content']));
+        $data['body'] = nl2br(htmlentities($data['body'], ENT_QUOTES, 'UTF-8'));
 
         Post::create([
             'slug' => Str::slug($data['title'], '-'),
