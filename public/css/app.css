@@ -187,7 +187,7 @@ header .user .log {
 header #usr-dropdown {
   display: inline-block;
 }
-header .username {
+header #usr-dropdown .username {
   font-size: 30px;
   margin-right: 2vw;
   position: relative;
@@ -199,13 +199,23 @@ header .username {
   text-overflow: ellipsis;
   display: block;
 }
-header .usr-options {
+header #usr-dropdown .usr-options {
   position: absolute;
+  max-width: 250px;
+  max-height: 500;
+  padding: 10px;
+  background-color: #222222;
+  border: 1.5px solid #9a9b9c;
+  border-radius: 5px;
+  right: 20px;
 }
-header #logout {
+header #usr-dropdown .usr-options a {
+  color: whitesmoke;
+}
+header #usr-dropdown .usr-options #logout {
   display: inline-block;
 }
-header #logout button {
+header #usr-dropdown .usr-options #logout button {
   background: none;
   border: none;
   color: whitesmoke;

@@ -34,10 +34,6 @@
             <a href="/register"><button class="log">SignUp</button></a>
         @else
             <x-usr-dropdown/>
-            <form method="POST" action="/logout" id="logout">
-                @csrf
-                <button type="submit"><i class="fas fa-sign-out-alt"></i>logout</button>
-            </form>
         @endguest
     </div>
 </header>

@@ -101,29 +101,42 @@ header{
 
     #usr-dropdown{
         display: inline-block;
-    }
 
-    .username{
-        font-size: 30px;
-        margin-right: 2vw;
-        position: relative;
-        cursor: pointer;
-        user-select: none;
-        text-overflow: ellipsis;
-        display: block;
-    }
+        .username{
+            font-size: 30px;
+            margin-right: 2vw;
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+            text-overflow: ellipsis;
+            display: block;
+        }
 
-    .usr-options{
-        position: absolute;
-    }
+        .usr-options{
+            position: absolute;
+            max-width: 250px;
+            max-height: 500;
+            padding: 10px;
+            background-color: $container-background;
+            border: 1.5px solid $border-light;
+            border-radius: 5px;
+            right: 20px;
 
-    #logout{
-        display: inline-block;
+            a{
+                color: $font;
+            }
 
-        button{
-            background: none;
-            border: none;
-            color: whitesmoke;
+            #logout{
+                display: inline-block;
+        
+                button{
+                    background: none;
+                    border: none;
+                    color: whitesmoke;
+                }
+            }
         }
     }
+
+    
 }
