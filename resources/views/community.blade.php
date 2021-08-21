@@ -5,6 +5,9 @@
     <hr>
 
     <div id="up-container">
-        <x-posts-list :posts="$posts"/>
+        <div id="comm-posts">
+            <x-posts-list :posts="$posts"/>
+        </div>
+        <x-comm-info :comm="$actualComm"/>
     </div>
 </x-layout>

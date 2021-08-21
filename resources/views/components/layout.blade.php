@@ -47,9 +47,6 @@
             @else
                 {{ $slot }}
             @endauth
-            @if (isset($actualComm))
-                <x-comm-info :comm="$actualComm"/>
-            @endif
         </div>
         <div id="subscribe">
             @auth
