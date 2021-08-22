@@ -26,8 +26,9 @@ Route::get('/', [PostController::class, 'main'])->name('home');
 
 Route::get('/post/{post:slug}', [PostController::class, 'found'])->name('post');
 Route::get('/create-post', [PostController::class, 'creator'])->middleware('auth');
+Route::get('/post/{post:slug}/edit', [PostController::class, 'editor'])->middleware('auth');
 Route::post('/create', [PostController::class, 'create'])->middleware('auth');
-Route::post('/delete', [PostController::class, 'delete']);
+Route::post('/delete', [PostController::class, 'delete'])->middleware('auth');
 Route::get('/comm/{community:slug}', [CommunityController::class, 'search'])->name('comm');
 
 Route::get('/newsletter', NewsletterController::class)->middleware('auth');

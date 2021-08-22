@@ -56,6 +56,12 @@ class PostController extends Controller
         return redirect('/post/' . Str::slug($data['title'], '-'));
     }
 
+    public function editor(Post $post){
+        return view('editor', [
+            'post' => $post
+        ]);
+    }
+
     public function delete(){
         $data = request()->validate([
             'post' => 'exists:posts,id'

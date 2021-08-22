@@ -21,7 +21,7 @@
                                     <input type="text" name="post" value="{{ $post->id }}" x-show="false"/>
                                     <input type="submit" value="Delete" class="danger"/>
                                 </form> --}}
-                            <span class="edit-btn"><a href="editor" >Edit</a></span>
+                            <span class="edit-btn"><a href="{{$post->slug}}/edit" >Edit</a></span>
                         </div>
                     @endif
                 @endauth
