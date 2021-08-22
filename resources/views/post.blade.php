@@ -21,13 +21,13 @@
                                     <input type="text" name="post" value="{{ $post->id }}" x-show="false"/>
                                     <input type="submit" value="Delete" class="danger"/>
                                 </form> --}}
-                            <span class="edit-btn"><a href="{{$post->slug}}/edit" >Edit</a></span>
+                            <a href="{{$post->slug}}/editor" class="edit-btn">Edit</a>
                         </div>
                     @endif
                 @endauth
             </div>
             <h1>{{ $post->title }}</h1>
-            <p>{!! $post->body !!}</p>
+            <p>{!! FormatStr::keepEnters($post->body) !!}</p>
 
             <x-make-comment :post="$post"/>
 

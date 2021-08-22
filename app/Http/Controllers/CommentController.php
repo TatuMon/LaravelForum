@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Models\Post;
+use App\Http\Helpers\FormatStr;
 
 class CommentController extends Controller
 {
@@ -12,9 +13,7 @@ class CommentController extends Controller
             'content' => 'required'
         ]);
 
-        $data['content'] = preg_replace('/\r/', '', $data['content']);
-        $data['content'] =  preg_replace('/\n{3,}/', '\n\n', preg_replace('/^\s+$/m', '', $data['content']));
-        $data['content'] = nl2br(htmlentities($data['content'], ENT_QUOTES));
+        $data['content'] = FormatStr::keepEnters($data['content']);
 
         $post->comments()->create([
             'user_id' => request()->user()->id,

@@ -439,7 +439,7 @@ body {
   background-color: #000000;
 }
 
-#creator {
+#creator, #post-editor {
   width: 70vw;
   display: flex;
   flex-direction: column;
@@ -450,23 +450,23 @@ body {
   padding: 20px;
   margin: 100px auto;
 }
-#creator h1 {
+#creator h1, #post-editor h1 {
   text-align: center;
 }
-#creator form {
+#creator form, #post-editor form {
   display: flex;
   flex-direction: column;
 }
-#creator form #post-title, #creator form select {
+#creator form #post-title, #creator form select, #post-editor form #post-title, #post-editor form select {
   background-color: #3A3A3C;
   border-radius: 5px;
   border: 1px solid #9a9b9c;
   color: whitesmoke;
 }
-#creator form option {
+#creator form option, #post-editor form option {
   color: whitesmoke;
 }
-#creator form textarea {
+#creator form textarea, #post-editor form textarea {
   width: 100%;
   background-color: #3A3A3C;
   border-radius: 5px;
@@ -474,7 +474,7 @@ body {
   min-height: 150px;
   color: whitesmoke;
 }
-#creator form #submit {
+#creator form #submit, #post-editor form #submit {
   margin-top: 10px;
 }
 

@@ -7,6 +7,7 @@ use App\Models\Community;
 use \App\Models\Post;
 use \App\Models\User;
 use Illuminate\Support\Str;
+use App\Http\Helpers\FormatStr;
 
 class PostController extends Controller
 {
@@ -39,10 +40,6 @@ class PostController extends Controller
             'body' => 'required'
         ]);
 
-        $data['body'] = preg_replace('/\r/', '', $data['body']);
-        $data['content'] =  preg_replace('/\n{3,}/', '\n\n', preg_replace('/^\s+$/m', '', $data['content']));
-        $data['body'] = nl2br(htmlentities($data['body'], ENT_QUOTES, 'UTF-8'));
-
         Post::create([
             'slug' => Str::slug($data['title'], '-'),
             'title' => $data['title'],
@@ -57,7 +54,8 @@ class PostController extends Controller
     }
 
     public function editor(Post $post){
-        return view('editor', [
+        return view('post-editor', [
+            'comms' => Community::select('name', 'slug')->get(),
             'post' => $post
         ]);
     }

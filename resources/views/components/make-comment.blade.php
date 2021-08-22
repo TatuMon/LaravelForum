@@ -9,7 +9,7 @@
     
     <form method="POST" action="/post/{{ $post->slug }}/comment">
         @csrf
-        <textarea name="content" class="comment-creator" placeholder="What are you thoughts?" value="{{ old('content') }}" required></textarea>
+        <textarea name="content" class="comment-creator" placeholder="What are you thoughts?" value="{{ old('content') }}" wrap="hard" required></textarea>
         
         @error('content')
             <span>{{ $message }}</span>

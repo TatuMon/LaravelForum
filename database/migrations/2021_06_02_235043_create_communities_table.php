@@ -19,7 +19,7 @@ class CreateCommunitiesTable extends Migration
             $table->string('slug')->unique();
             $table->string('description')->unique();
             $table->integer('members')->default(0);
-            $table->string('created_by')->nullable();
+            $table->foreignId('created_by')->nullable();
             $table->timestamp('comm_created_at')->nullable();
             $table->timestamps();
         });

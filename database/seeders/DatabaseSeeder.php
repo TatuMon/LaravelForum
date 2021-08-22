@@ -17,9 +17,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(3)->create();
-        Post::factory(3)->create();
-        Community::factory(3)->create();
-        Comment::factory(3)->create();
+        Community::create([
+            'name' => 'General',
+            'slug' => 'general',
+            'description' => 'Where all the communities gather togheter',
+            'created_by' => 1
+        ]);
     }
 }

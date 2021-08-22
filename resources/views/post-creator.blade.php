@@ -14,10 +14,10 @@
                 </select>
 
                 <label for="title">Title</label>
-                <input type="text" name="title" id="post-title" autocomplete="off" maxlength="50" required>
+                <input type="text" name="title" id="post-title" autocomplete="off" maxlength="50" value="{{ old('title') }}"  required>
 
                 <label for="body">Body</label>
-                <textarea name="body" required></textarea>
+                <textarea name="body" wrap="hard" required style="white-space: pre-wrap"></textarea>
 
                 <input id="submit" type="submit" value="Submit post"/>
 
