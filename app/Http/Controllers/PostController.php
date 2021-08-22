@@ -60,6 +60,22 @@ class PostController extends Controller
         ]);
     }
 
+    public function edit(Post $post){
+        $data = request()->validate([
+            'title' => 'required|max:50|regex:/[\w\d\s]/|unique:posts',
+            'body' => 'required'
+        ]);
+
+        Post::where('slug', $post->slug)->update([
+            'title' => $data['title'],
+            'slug' => Str::slug($data['title'], '-'),
+            'body' => $data['body']
+        ]);
+
+        session()->flash('success', 'Post successfuly edited');
+        return redirect('/post/' . Str::slug($data['title'], '-'));
+    }
+
     public function delete(){
         $data = request()->validate([
             'post' => 'exists:posts,id'
