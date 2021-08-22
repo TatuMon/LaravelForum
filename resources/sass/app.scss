@@ -5,11 +5,11 @@
 @import "session-error";
 @import "session";
 @import "header";
-@import "posts";
 @import "user";
 @import "comment";
 @import "profile";
 @import "comm-info";
+@import "posts";
 @import "post-creator";
 
 body, html{
@@ -47,6 +47,10 @@ body, html{
 .btn:hover{
     text-decoration: none;
     color: $font;
+}
+
+.underline:hover{
+    text-decoration: underline !important;
 }
 
 .danger{

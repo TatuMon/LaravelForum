@@ -221,50 +221,6 @@ header #usr-dropdown .usr-options #logout button {
   color: whitesmoke;
 }
 
-.no_posts_alert {
-  display: block;
-  text-align: center;
-}
-
-#up-container {
-  width: 60vw;
-  margin: auto;
-}
-#up-container .post-info span {
-  font-size: 17px;
-  color: #9a9b9c;
-}
-#up-container .post-info a {
-  font-size: 17px;
-  text-decoration: none;
-  color: #9a9b9c;
-}
-#up-container .post-info a:hover {
-  text-decoration: underline !important;
-}
-#up-container .post-info .community_name {
-  margin: 0;
-  font-weight: lighter;
-}
-
-article {
-  width: 100%;
-  margin: 10px auto;
-  padding: 0px 20px;
-  padding-bottom: 20px;
-  border: 1px solid #676869;
-  border-radius: 5px;
-  cursor: pointer;
-}
-article a {
-  text-decoration: none !important;
-  color: whitesmoke !important;
-}
-
-article:hover {
-  border: 1px solid #9a9b9c;
-}
-
 .usr-card {
   width: 100%;
   margin-bottom: 50px;
@@ -421,6 +377,63 @@ article:hover {
   font-size: 17px;
 }
 
+.no_posts_alert {
+  display: block;
+  text-align: center;
+}
+
+#up-container {
+  width: 60vw;
+  margin: auto;
+}
+#up-container .post-info {
+  position: relative;
+}
+#up-container .post-info span {
+  font-size: 17px;
+  color: #9a9b9c;
+}
+#up-container .post-info a {
+  font-size: 17px;
+  text-decoration: none;
+  color: #9a9b9c;
+}
+#up-container .post-info .community_name {
+  margin: 0;
+  font-weight: lighter;
+}
+#up-container .post-info #post-opts {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#up-container .post-info #post-opts .edit-btn {
+  text-align: center;
+  border: 2px solid #9a9b9c;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+article {
+  width: 100%;
+  margin: 10px auto;
+  padding: 0px 20px;
+  padding-bottom: 20px;
+  border: 1px solid #676869;
+  border-radius: 5px;
+  cursor: pointer;
+}
+article a {
+  text-decoration: none !important;
+  color: whitesmoke !important;
+}
+
+article:hover {
+  border: 1px solid #9a9b9c;
+}
+
 body {
   font-family: "Roboto";
   background-color: #000000;
@@ -500,6 +513,10 @@ body, html {
 .btn:hover {
   text-decoration: none;
   color: whitesmoke;
+}
+
+.underline:hover {
+  text-decoration: underline !important;
 }
 
 .danger {

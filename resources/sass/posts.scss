@@ -8,6 +8,8 @@
     margin: auto;
 
     .post-info{
+        position: relative;
+
         span{
             font-size: 17px;
             color: #9a9b9c
@@ -19,13 +21,24 @@
             color: #9a9b9c;
         }
 
-        a:hover{
-            text-decoration: underline !important;
-        }
-
         .community_name{
             margin: 0;
             font-weight: lighter;
+        }
+
+        #post-opts{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .edit-btn{
+                text-align: center;
+                border: 2px solid $border-light;
+                border-radius: 5px;
+                padding: 5px;
+            }
         }
     }
 }
