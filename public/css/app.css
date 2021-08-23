@@ -133,6 +133,7 @@ header .community-filter .communities-menu {
   border: 1px solid #676767;
   border-radius: 3px;
   font-size: 20px;
+  text-align: center;
 }
 header .community-filter .communities-menu div {
   width: 100%;
@@ -552,4 +553,27 @@ body, html {
   background: none;
   border-radius: 5px;
   color: whitesmoke;
+}
+
+.load-spinner {
+  -webkit-animation: rotation 2s infinite linear;
+          animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }

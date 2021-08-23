@@ -19,7 +19,9 @@ __webpack_require__(/*! ./comms-list */ "./resources/js/comms-list.js");
 
 $(function () {
   $('.dropdown-button').one('click', function () {
+    $('.fa-spinner').addClass('load-spinner');
     $.get('/api/comms', function (data) {
+      $('.fa-spinner').remove();
       data = JSON.parse(data);
       data.forEach(function (comm, i) {
         $('.communities-menu').append("<div><a href=\"/comm/".concat(comm.slug, "\">").concat(comm.name, "</a></div>"));

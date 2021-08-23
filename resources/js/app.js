@@ -1,1 +1,1 @@
-require('./comms-list');
+require('./comms-list')
