@@ -3,7 +3,7 @@
         <i class="fas fa-users"></i>
         <i class="fas fa-caret-down"></i>
         <div x-show="show" class="communities-menu">
-            <!-- list of communitites -->
+            
         </div>
     </div>
 </div>
