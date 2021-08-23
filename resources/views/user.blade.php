@@ -1,4 +1,4 @@
-<x-layout :comms="$comms">
+<x-layout>
     <x-slot name="title">{{ $user->username }}</x-slot>
     <div id="main-info">
         <div id="prof-title">

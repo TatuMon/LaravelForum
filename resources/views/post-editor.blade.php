@@ -1,4 +1,4 @@
-<x-layout :comms="$comms">
+<x-layout>
     <x-slot name="title">{{ $post->name }}</x-slot>
 
     <section id="post-editor">

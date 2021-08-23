@@ -1,4 +1,4 @@
-<x-layout :comms="$comms" :actualComm="$actualComm">
+<x-layout :actualComm="$actualComm">
     <x-slot name="title"> {{ $name }} </x-slot>
     <h1 style="text-align: center"> {{ $name }} </h1>    
 

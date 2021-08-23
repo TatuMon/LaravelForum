@@ -14,7 +14,6 @@ class PostController extends Controller
     public function main(){
         return view('posts', [
             'posts' => Post::latest('published_at')->filter(request(['search']))->get()->sortDesc(),
-            'comms' => Community::select('name', 'slug')->get(),
             'usrs' => User::filter(request(['search']))->get()
         ]);
     }
@@ -22,15 +21,12 @@ class PostController extends Controller
     public function found(Post $post){
         return view('post', [
             'post' => $post,
-            'comms' => Community::select('name', 'slug')->get(),
             'comments' => $post->comments->sortByDesc('created_at')
         ]);
     }
 
     public function creator(){
-        return view('post-creator', [
-            'comms' => Community::select('id', 'name', 'slug')->get()
-        ]);
+        return view('post-creator');
     }
 
     public function create(){
@@ -55,7 +51,6 @@ class PostController extends Controller
 
     public function editor(Post $post){
         return view('post-editor', [
-            'comms' => Community::select('name', 'slug')->get(),
             'post' => $post
         ]);
     }

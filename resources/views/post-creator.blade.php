@@ -1,4 +1,4 @@
-<x-layout :comms="$comms">
+<x-layout>
     <x-slot name="title">Create your post</x-slot>
     <body>
         <section id="creator">

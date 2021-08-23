@@ -5,6 +5,16 @@
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+__webpack_require__(/*! ./comms-list */ "./resources/js/comms-list.js");
+
+/***/ }),
+
+/***/ "./resources/js/comms-list.js":
+/*!************************************!*\
+  !*** ./resources/js/comms-list.js ***!
+  \************************************/
 /***/ (() => {
 
 

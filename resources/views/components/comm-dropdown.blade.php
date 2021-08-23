@@ -3,9 +3,7 @@
         <i class="fas fa-users"></i>
         <i class="fas fa-caret-down"></i>
         <div x-show="show" class="communities-menu">
-            @foreach ($comms as $comm)
-                <div><a href="/comm/{{ $comm->slug }}">{{ $comm->name }}</a></div>
-            @endforeach
+            <!-- list of communitites -->
         </div>
     </div>
 </div>

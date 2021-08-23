@@ -36,7 +36,7 @@
     </head>
 
     <body>
-        <x-header :comms="$comms"/>
+        <x-header/>
         <div id="main-container" class="main-container">
             @auth
                 @if (auth()->user()->role == "BANNED")
