@@ -6,11 +6,8 @@
             <form method="POST" action="/create" id="post-form">
                 @csrf
                 <label for="comm"></label>
-                <select name="comm" class="select" required>
+                <select name="comm" class="select" id="select-comms" required>
                     <option selected disabled value="">Where you want to upload this post?</option>
-                    @foreach ($comms as $comm)
-                        <option value="{{ $comm->id }}">{{ $comm->name }}</option>
-                    @endforeach
                 </select>
 
                 <label for="title">Title</label>

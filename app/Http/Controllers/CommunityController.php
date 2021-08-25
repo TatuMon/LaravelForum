@@ -18,7 +18,7 @@ class CommunityController extends Controller
     }
 
     public function list(){
-        $comms = Community::select('name', 'slug')->get();
+        $comms = Community::select('id', 'name', 'slug')->get();
 
         ToAjax::object($comms);
     }

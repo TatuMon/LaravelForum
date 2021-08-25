@@ -17,17 +17,51 @@ __webpack_require__(/*! ./comms-list */ "./resources/js/comms-list.js");
   \************************************/
 /***/ (() => {
 
-$(function () {
-  $('.dropdown-button').one('click', function () {
-    $('.fa-spinner').addClass('load-spinner');
-    $.get('/api/comms', function (data) {
-      $('.fa-spinner').remove();
-      data = JSON.parse(data);
-      data.forEach(function (comm, i) {
-        $('.communities-menu').append("<div><a href=\"/comm/".concat(comm.slug, "\">").concat(comm.name, "</a></div>"));
+var spin = function spin() {
+  $('.fa-spinner').addClass('load-spinner');
+};
+
+var removeSpinner = function removeSpinner() {
+  $('.fa-spinner').remove();
+};
+
+var getCommsForLinks = function getCommsForLinks(targetEl) {
+  if (typeof targetEl === 'string') {
+    $(targetEl).one('click', function () {
+      spin();
+      return $.get('/api/comms').then(function (data) {
+        removeSpinner();
+        data = JSON.parse(data);
+        data.forEach(function (comm) {
+          $('.communities-menu').append("<div><a href=\"/comm/".concat(comm.slug, "\">").concat(comm.name, "</a></div>"));
+        });
       });
     });
-  });
+  } else {
+    console.error('Argument must be of type string');
+  }
+};
+
+var getCommsForOptions = function getCommsForOptions(targetEl) {
+  if (typeof targetEl === 'string') {
+    $(targetEl).one('click', function () {
+      spin();
+      return $.get('/api/comms').then(function (data) {
+        removeSpinner();
+        data = JSON.parse(data);
+        data.forEach(function (comm) {
+          $('#select-comms').append("<option value=\"".concat(comm.id, "\">").concat(comm.name, "</option>"));
+        });
+      });
+    });
+  } else {
+    console.error('Argument must be of type string');
+  }
+};
+
+$(function () {
+  getCommsForLinks('.dropdown-button');
+  getCommsForOptions('#select-comms');
 });
 
 /***/ }),
