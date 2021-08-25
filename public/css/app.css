@@ -417,7 +417,7 @@ header #usr-dropdown .usr-options #logout button {
   padding: 10px;
   min-width: 500px;
   position: absolute;
-  right: 100%;
+  right: 0;
 }
 #up-container .post-info #post-opts .edit-btn {
   text-align: center;

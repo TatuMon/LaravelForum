@@ -3,14 +3,14 @@
 
     <div id="up-container">
         <article>
-            <div class="post-info" x-data="{show : false}">
+            <div class="post-info">
                 <span><a class="community_name underline" href="/comm/{{ $post->community->slug }}">comm/{{ $post->community->name }}</a></span>
                 <span>•</span>
                 <span>posted by <a class="user_name underline" href="/usr/{{ $post->user->slug }}">{{ $post->user->username }}</a></span>
                 <span>{{ $post->created_at->diffForHumans() }}</span>
                 @auth
                     @if(auth()->user()->role == 'Black Hand of Branca' || $post->user->id == auth()->user()->id)
-                        <div id="post-opts">
+                        <div id="post-opts" x-data="{show : false}">
                             <span class="danger" @click="show = !show">Delete</span>
                                 <form method="POST" action="/delete" x-show="show" @click.away="show = !show" id="delete-post">
                                     @csrf
