@@ -278,6 +278,12 @@ header #usr-dropdown .usr-options #logout button {
   padding-left: 10px;
   line-height: normal;
 }
+.comment-box .info {
+  display: flex;
+}
+.comment-box .info :last-child {
+  margin-left: auto;
+}
 .comment-box .user-logo {
   border-radius: 50%;
   width: 50px;
@@ -424,6 +430,9 @@ header #usr-dropdown .usr-options #logout button {
   border: 2px solid #9a9b9c;
   border-radius: 5px;
   padding: 5px;
+}
+#up-container #title {
+  width: 90%;
 }
 
 article {

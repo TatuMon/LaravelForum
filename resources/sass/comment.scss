@@ -35,6 +35,14 @@
     padding-left: 10px;
     line-height: normal;
 
+    .info{
+        display: flex;
+
+        :last-child{
+            margin-left: auto;
+        }
+    }
+
     .user-logo{
         border-radius: 50%;
         width: 50px;
