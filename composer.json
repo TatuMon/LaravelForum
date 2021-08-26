@@ -13,6 +13,7 @@
         "laravel/framework": "^8.40",
         "laravel/helpers": "^1.4",
         "laravel/tinker": "^2.5",
+        "mailchimp/marketing": "^3.0",
         "spatie/yaml-front-matter": "^2.0"
     },
     "require-dev": {
@@ -28,7 +29,10 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "App/Http/Helpers/FormatStr.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

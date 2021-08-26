@@ -1,0 +1,77 @@
+.no_posts_alert{
+    display: block;
+    text-align: center;
+}
+
+#up-container{
+    width: 60vw;
+    margin: auto;
+
+    .post-info{
+        position: relative;
+
+        span{
+            font-size: 17px;
+            color: #9a9b9c
+        }
+
+        a{
+            font-size: 17px;
+            text-decoration: none;
+            color: #9a9b9c;
+        }
+
+        .community_name{
+            margin: 0;
+            font-weight: lighter;
+        }
+
+        #post-opts{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: flex;
+            flex-direction: column;
+
+            form{
+                background-color: $container-background;
+                border: 2px solid $border-light;
+                border-radius: 5px;
+                padding: 10px;
+                min-width: 500px;
+                position: absolute;
+                right: 0;
+            }
+
+            .edit-btn{
+                text-align: center;
+                border: 2px solid $border-light;
+                border-radius: 5px;
+                padding: 5px;
+            }
+        }
+    }
+
+    #title{
+        width: 90%;
+    }
+}
+
+article{
+    width: 100%;
+    margin: 10px auto;
+    padding: 0px 20px;
+    padding-bottom: 20px;
+    border: 1px solid #676869;
+    border-radius: 5px;
+    cursor: pointer;
+
+    a{
+        text-decoration: none !important;
+        color: whitesmoke !important;
+    } 
+};
+
+article:hover{
+    border: 1px solid #9a9b9c;
+}

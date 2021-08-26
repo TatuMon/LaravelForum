@@ -1,1 +1,2 @@
-require('./bootstrap');
+require('./comms-list')
+require('./delete-comment')

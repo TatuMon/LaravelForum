@@ -21,9 +21,10 @@ class CommunityFactory extends Factory
      */
     public function definition()
     {
+        $name = $this->faker->word;
         return [
-            'name' => $this->faker->word,
-            'slug' => $this->faker->slug,
+            'name' => $name,
+            'slug' => $name,
             'description' => $this->faker->sentence,
         ];
     }

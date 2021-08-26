@@ -1,0 +1,97 @@
+//Here goes ONLY the imports, the default app styling and the styling that would affect primarly the layout blade component
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import "_variables";
+@import "session-success";
+@import "session-error";
+@import "session";
+@import "header";
+@import "user";
+@import "comment";
+@import "profile";
+@import "comm-info";
+@import "posts";
+@import "post-creator";
+
+body, html{
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 120%;
+    color: $font;
+    background-color: $background;
+}
+
+*::-webkit-scrollbar{
+    width: 10px;
+    background-color: $container-background;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: $border-light;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover{
+    background-color: $border-dark;
+}
+
+.btn{
+    display: block;
+    border: 1.5px solid $border-light;
+    background: none;
+    border-radius: 5px;
+    color: $font;
+    width: 90%;
+    margin: auto;
+}
+
+.btn:hover{
+    text-decoration: none;
+    color: $font;
+}
+
+.underline:hover{
+    text-decoration: underline !important;
+}
+
+.danger{
+    float: right;
+    border: 2px solid $danger;
+    border-radius: 5px;
+    color: $danger !important;
+    background: none;
+    padding: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.main-container{
+    margin-top: 100px;
+    
+    #up-container{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+#subscribe{
+    text-align: center;
+    margin: 20px auto;
+    width: 15vw;
+
+    .newsletter{
+        border: 1.5px solid $border-light;
+        background: none;
+        border-radius: 5px;
+        color: $font;
+    }
+}
+
+.load-spinner{
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(359deg); }
+}
