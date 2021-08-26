@@ -13,7 +13,7 @@ class PostController extends Controller
 {
     public function main(){
         return view('posts', [
-            'posts' => Post::latest('published_at')->filter(request(['search']))->get()->sortDesc(),
+            'posts' => Post::latest('published_at')->filter(request(['search']))->orderBy('id', 'desc')->paginate(5),
             'usrs' => User::filter(request(['search']))->get()
         ]);
     }

@@ -3,4 +3,6 @@
     <div id="up-container">
         <x-posts-list :posts="$posts" :usrs="$usrs"/>
     </div>
+
+    {{ $posts->links() }}
 </x-layout>
