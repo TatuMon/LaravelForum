@@ -9,6 +9,8 @@
 
 __webpack_require__(/*! ./comms-list */ "./resources/js/comms-list.js");
 
+__webpack_require__(/*! ./delete-comment */ "./resources/js/delete-comment.js");
+
 /***/ }),
 
 /***/ "./resources/js/comms-list.js":
@@ -62,6 +64,41 @@ var getCommsForOptions = function getCommsForOptions(targetEl) {
 $(function () {
   getCommsForLinks('.dropdown-button');
   getCommsForOptions('#select-comms');
+});
+
+/***/ }),
+
+/***/ "./resources/js/delete-comment.js":
+/*!****************************************!*\
+  !*** ./resources/js/delete-comment.js ***!
+  \****************************************/
+/***/ (() => {
+
+$(function () {
+  $('.delete-comment').on('click', function () {
+    var commentContainer = $(this).parents('.comment-box');
+    $.ajax({
+      url: '/comment/delete',
+      method: 'POST',
+      data: {
+        comment: $(this).attr('id')
+      },
+      dataType: 'json',
+      headers: {
+        'X-CSRF-TOKEN': $(this).attr('data-token')
+      },
+      beforeSend: function beforeSend() {
+        $(this).children().removeClass();
+        $(this).children().addClass('fas fa-spinner load-spinner');
+      }
+    }).then(function (data) {
+      console.log(data.message);
+
+      if (data.deleted) {
+        commentContainer.remove();
+      }
+    });
+  });
 });
 
 /***/ }),

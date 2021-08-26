@@ -50,3 +50,4 @@ Route::post('/login', [SessionController::class, 'login'])->middleware('guest');
 Route::post('/logout', [SessionController::class, 'destroy'])->middleware('auth');
 
 Route::post('post/{post:slug}/comment', [CommentController::class, 'store'])->middleware('auth');
+Route::post('/comment/delete', [CommentController::class, 'delete']);

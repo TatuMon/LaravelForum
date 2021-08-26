@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Models\Post;
+use \App\Models\Comment;
 use App\Http\Helpers\FormatStr;
 
 class CommentController extends Controller
@@ -21,5 +22,15 @@ class CommentController extends Controller
         ]);
 
         return back();
+    }
+
+    public function delete(){
+        $comment = Comment::where('id', request()->input('comment'))->where('user_id', request()->user()->id);
+
+        if($comment->delete()){
+            echo json_encode(['deleted' => 1, 'message' => 'Post deleted']);
+        } else {
+            echo json_encode(['deleted' => 0, 'message' => 'An error occurred: self-destruct in 10 seconds']);
+        }
     }
 }

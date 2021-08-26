@@ -281,7 +281,7 @@ header #usr-dropdown .usr-options #logout button {
 .comment-box .info {
   display: flex;
 }
-.comment-box .info :last-child {
+.comment-box .info .delete-comment {
   margin-left: auto;
 }
 .comment-box .user-logo {
