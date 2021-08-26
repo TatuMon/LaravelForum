@@ -497,6 +497,35 @@ body {
   margin-top: 10px;
 }
 
+.text-center {
+  display: flex !important;
+  width: 50%;
+  margin: auto;
+}
+.text-center .pagination {
+  justify-content: center;
+  margin: auto;
+}
+.text-center .pagination > li > a,
+.text-center .pagination > li > span {
+  background: #1A1A1B !important;
+  color: whitesmoke !important;
+}
+.text-center .pagination > li > a:hover {
+  box-shadow: 0px 5px whitesmoke;
+}
+.text-center .pagination > .active > a,
+.text-center .pagination > .active > a:focus,
+.text-center .pagination > .active > a:hover,
+.text-center .pagination > .active > span,
+.text-center .pagination > .active > span:focus,
+.text-center .pagination > .active > span:hover {
+  color: #1A1A1B !important;
+  background-color: whitesmoke !important;
+  border-color: whitesmoke !important;
+  cursor: default;
+}
+
 body, html {
   margin: 0;
   font-family: "Roboto";
