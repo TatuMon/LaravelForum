@@ -46,11 +46,6 @@
                 {{ $slot }}
             @endauth
         </div>
-        <div id="subscribe">
-            @auth
-            <a href="/newsletter"><button class="newsletter">Send information about new updates to my email</button></a>
-            @endauth
-        </div>
         <x-session-success />
         <x-session-error/>
 

@@ -33,8 +33,6 @@ Route::post('/delete', [PostController::class, 'delete'])->middleware('auth');
 
 Route::get('/comm/{community:slug}', [CommunityController::class, 'search'])->name('comm');
 
-Route::get('/newsletter', NewsletterController::class)->middleware('auth');
-
 Route::get('/usr/{user:username}', [UserController::class, 'found'])->name('usr');
 Route::get('/change-pic', [UserController::class, 'changer']);
 Route::post('/changePic', [UserController::class, 'changePic']);

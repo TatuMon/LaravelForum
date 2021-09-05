@@ -75,19 +75,6 @@ body, html{
     }
 }
 
-#subscribe{
-    text-align: center;
-    margin: 20px auto;
-    width: 15vw;
-
-    .newsletter{
-        border: 1.5px solid $border-light;
-        background: none;
-        border-radius: 5px;
-        color: $font;
-    }
-}
-
 .load-spinner{
     animation: rotation 2s infinite linear;
 }
