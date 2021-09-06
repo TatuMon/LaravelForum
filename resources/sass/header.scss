@@ -162,6 +162,22 @@ header{
                     line-height: 2.5vh;
                     color: whitesmoke;
                 }
+
+                a{
+                    color: whitesmoke;
+                    font-size: 2.5vh;
+                }
+
+                #logout{
+                    display: inline-block;
+        
+                    button{
+                        background: none;
+                        border: none;
+                        color: whitesmoke;
+                        font-size: 2.5vh;
+                    }
+                }
             }
 
             .github-mobile{

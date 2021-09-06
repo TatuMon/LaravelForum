@@ -244,6 +244,19 @@ header #mobile-menu-dropdown #mobile-menu .mobile-user .mobile-log {
   line-height: 2.5vh;
   color: whitesmoke;
 }
+header #mobile-menu-dropdown #mobile-menu .mobile-user a {
+  color: whitesmoke;
+  font-size: 2.5vh;
+}
+header #mobile-menu-dropdown #mobile-menu .mobile-user #logout {
+  display: inline-block;
+}
+header #mobile-menu-dropdown #mobile-menu .mobile-user #logout button {
+  background: none;
+  border: none;
+  color: whitesmoke;
+  font-size: 2.5vh;
+}
 header #mobile-menu-dropdown #mobile-menu .github-mobile {
   font-size: 4vh;
 }
