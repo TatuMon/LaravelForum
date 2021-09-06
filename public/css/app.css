@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap);
 .success {
   position: fixed;
@@ -393,30 +394,44 @@ header #usr-dropdown .usr-options #logout button {
   width: 60vw;
   margin: auto;
 }
-#up-container .post-info {
+#up-container article {
+  width: 100%;
+  margin: 10px auto;
+  padding: 0px 20px;
+  padding-bottom: 20px;
+  border: 1px solid #676869;
+  border-radius: 5px;
+}
+#up-container article a {
+  text-decoration: none !important;
+  color: whitesmoke !important;
+}
+#up-container article .post-info {
   position: relative;
 }
-#up-container .post-info span {
+#up-container article .post-info span {
   font-size: 17px;
-  color: #9a9b9c;
+  color: #c0c0c0;
 }
-#up-container .post-info a {
+#up-container article .post-info a {
   font-size: 17px;
   text-decoration: none;
-  color: #9a9b9c;
 }
-#up-container .post-info .community_name {
+#up-container article .post-info a:hover {
+  text-decoration: underline !important;
+}
+#up-container article .post-info .community_name {
   margin: 0;
   font-weight: lighter;
 }
-#up-container .post-info #post-opts {
+#up-container article .post-info #post-opts {
   position: absolute;
   right: 10px;
   top: 10px;
   display: flex;
   flex-direction: column;
 }
-#up-container .post-info #post-opts form {
+#up-container article .post-info #post-opts form {
   background-color: #222222;
   border: 2px solid #9a9b9c;
   border-radius: 5px;
@@ -425,34 +440,38 @@ header #usr-dropdown .usr-options #logout button {
   position: absolute;
   right: 0;
 }
-#up-container .post-info #post-opts .edit-btn {
+#up-container article .post-info #post-opts .edit-btn {
   text-align: center;
   border: 2px solid #9a9b9c;
   border-radius: 5px;
   padding: 5px;
 }
-#up-container #title {
+#up-container article .title {
   width: 90%;
+  font-weight: bold;
 }
-
-article {
-  width: 100%;
-  margin: 10px auto;
-  padding: 0px 20px;
-  padding-bottom: 20px;
-  border: 1px solid #676869;
-  border-radius: 5px;
-  cursor: pointer;
+#up-container article .excerpt {
+  font-weight: lighter;
 }
-article a {
-  text-decoration: none !important;
-  color: whitesmoke !important;
-}
-
-article:hover {
+#up-container article:hover {
   border: 1px solid #9a9b9c;
 }
 
+@media (max-width: 1000px) {
+  #up-container article .post-info {
+    margin-bottom: 10px;
+  }
+  #up-container article .post-info span, #up-container article .post-info a {
+    font-size: 1.5rem;
+  }
+  #up-container article .title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  #up-container article .excerpt {
+    font-size: 2rem;
+  }
+}
 body {
   font-family: "Roboto";
   background-color: #000000;
@@ -556,6 +575,7 @@ body, html {
   color: whitesmoke;
   width: 90%;
   margin: auto;
+  padding: 0;
 }
 
 .btn:hover {
@@ -590,18 +610,6 @@ body, html {
   position: relative;
 }
 
-#subscribe {
-  text-align: center;
-  margin: 20px auto;
-  width: 15vw;
-}
-#subscribe .newsletter {
-  border: 1.5px solid #9a9b9c;
-  background: none;
-  border-radius: 5px;
-  color: whitesmoke;
-}
-
 .load-spinner {
   -webkit-animation: rotation 2s infinite linear;
           animation: rotation 2s infinite linear;
@@ -622,5 +630,10 @@ body, html {
   }
   to {
     transform: rotate(359deg);
+  }
+}
+@media (max-width: 1050px) {
+  .btn {
+    font-size: 2.5rem;
   }
 }
