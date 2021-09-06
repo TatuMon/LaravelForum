@@ -34,4 +34,6 @@
             <x-usr-dropdown/>
         @endguest
     </div>
+
+    <x-mediaquery-header />
 </header>
