@@ -12,11 +12,17 @@
         text-align: center;
     }
 
-    #comm-date{
+    #comm-date, #comm-posts-amount{
         font-size: 17px;
     }
+}
 
-    #comm-posts-amount{
-        font-size: 17px;
+@media (max-width: 1000px){
+    #comm-info{
+        font-size: 1.5rem;
+
+        #comm-date, #comm-posts-amount{
+            font-size: 1rem;
+        }
     }
 }
