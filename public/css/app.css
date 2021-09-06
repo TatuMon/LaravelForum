@@ -713,6 +713,11 @@ body, html {
           animation: rotation 2s infinite linear;
 }
 
+.error-msg {
+  color: #ED4337;
+  font-size: 15px;
+}
+
 @-webkit-keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -737,5 +742,9 @@ body, html {
 
   .btn {
     font-size: 2.5rem;
+  }
+
+  .error-msg {
+    font-size: 2rem;
   }
 }
