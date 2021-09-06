@@ -427,28 +427,12 @@ header #mobile-menu-dropdown #mobile-menu .github-mobile {
 }
 
 #comm-info {
-  position: absolute;
-  right: -20vw;
-  width: 20vw;
-  background: none;
-  border: 2px solid #9a9b9c;
-  border-radius: 5px;
-  padding: 10px;
-}
-#comm-info #comm-name {
-  font-weight: bolder;
   text-align: center;
-}
-#comm-info #comm-date, #comm-info #comm-posts-amount {
-  font-size: 17px;
 }
 
 @media (max-width: 1000px) {
   #comm-info {
     font-size: 1.5rem;
-  }
-  #comm-info #comm-date, #comm-info #comm-posts-amount {
-    font-size: 1rem;
   }
 }
 .no_posts_alert {

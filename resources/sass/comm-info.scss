@@ -1,28 +1,9 @@
 #comm-info{
-    position: absolute;
-    right: -20vw;
-    width: 20vw;
-    background: none;
-    border: 2px solid $border-light;
-    border-radius: 5px;
-    padding: 10px;
-
-    #comm-name{
-        font-weight: bolder;
-        text-align: center;
-    }
-
-    #comm-date, #comm-posts-amount{
-        font-size: 17px;
-    }
+    text-align: center;
 }
 
 @media (max-width: 1000px){
     #comm-info{
         font-size: 1.5rem;
-
-        #comm-date, #comm-posts-amount{
-            font-size: 1rem;
-        }
     }
 }
