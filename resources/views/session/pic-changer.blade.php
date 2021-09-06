@@ -28,15 +28,17 @@
         <h1>Change your profile pic</h1>
         <div>
             <h3>This is your actual profile pic</h3>
-            <img src="{{ asset('profile-pics/' . auth()->user()->pic) }}">
+            <img src="{{ asset('profile-pics/' . auth()->user()->pic) }}" style="border-radius: 50%">
         </div>
 
-        <form method="POST" action="/changePic" enctype="multipart/form-data">
+        <form method="POST" action="/changePic" enctype="multipart/form-data" id="pic-changer-form">
             @csrf
             <label for="image">Choose your new image</label>
-            <input type="file" name="image" id="image" required>
-
-            <input type="submit">
+            <br>
+            <input type="file" id="selectedFile" style="display: none;" required/>
+            <input type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();" />
+            <br>
+            <input type="submit" value="Send">
 
             @error('image')
             <p style="color: #ED4337; font-size: 15px">{{ $message }}</p>

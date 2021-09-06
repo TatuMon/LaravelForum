@@ -7,6 +7,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 40vw;
+    text-align: center;
     background-color: #1A1A1B;
     border: 3px solid #676869;
     border-radius: 10px;
@@ -61,5 +62,44 @@ body{
     p{
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: 1000px){
+    #session{
+        width: 70vw;
+        font-size: 1.5rem;
+    }
+
+    #pic-changer-form{
+        font-size: 2rem;
+
+        input{
+            max-width: 100%;
+            font-size: 5vw;
+            background-color: #3A3A3C;
+            border: 1px solid #9a9b9c;
+            border-radius: 5px;
+            color: whitesmoke;
+            margin: 25px auto;
+        }
+    }
+
+    #session-form{
+        font-size: 2rem;
+
+        .input{
+            font-size: 5vw !important;
+
+            input{
+                height: 70px !important;
+            }
+        }
+
+        .submit{
+            font-size: 2.5vw;
+            height: 60px !important;
+            margin: 50px auto !important;
+        }
     }
 }
