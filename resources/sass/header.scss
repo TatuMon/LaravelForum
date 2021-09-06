@@ -26,7 +26,7 @@ header{
     .community-filter{
         margin: auto 0px;
         margin-left: auto;
-        font-size: 2.5vw;
+        font-size: 50px;
 
         .dropdown-button{
             position: relative;
@@ -36,7 +36,6 @@ header{
 
         .communities-menu{
             position: absolute;
-            max-height: 400px;
             min-width: 200px;
             user-select: none;
             background-color: #1A1A1B;
@@ -139,5 +138,77 @@ header{
         }
     }
 
-    
+    #mobile-menu-dropdown{
+        display: none;
+        position: relative;
+
+        #mobile-menu{
+            position: absolute;
+            width: 25vw;
+            right: 0px;
+            display: flex;
+            flex-direction: column;
+            background-color: #1A1A1B;
+            border: 1px solid #676767;
+            border-radius: 3px;
+            padding: 10px;
+
+            .mobile-user{
+                .mobile-log{
+                    margin-bottom: 20px;
+                    background: none;
+                    border: none;
+                    font-size: 2.5vh;
+                    line-height: 2.5vh;
+                    color: whitesmoke;
+                }
+            }
+
+            .github-mobile{
+                font-size: 4vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px){
+    header{
+        max-height: 10vh !important;
+
+        .logo{
+            img{
+                width: 8vh;
+            }
+        }
+
+        .dropdown-button{
+            font-size: 65px;
+            line-height: 65px;
+        }
+
+        .user-search-bar{
+            input[type='search']{
+                height: 5vh;
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+
+            ::placeholder{
+                font-size: 1.5rem;
+            }
+        }
+
+        .github, .user, #usr-dropdown{
+            display: none;
+        }
+
+        #mobile-menu-dropdown{
+            display: block;
+            margin-right: auto;
+
+            i{
+                font-size: 50px;
+            }
+        }
+    }
 }

@@ -112,7 +112,7 @@ header .logo img {
 header .community-filter {
   margin: auto 0px;
   margin-left: auto;
-  font-size: 2.5vw;
+  font-size: 50px;
 }
 header .community-filter .dropdown-button {
   position: relative;
@@ -124,7 +124,6 @@ header .community-filter .dropdown-button {
 }
 header .community-filter .communities-menu {
   position: absolute;
-  max-height: 400px;
   min-width: 200px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -222,7 +221,69 @@ header #usr-dropdown .usr-options #logout button {
   border: none;
   color: whitesmoke;
 }
+header #mobile-menu-dropdown {
+  display: none;
+  position: relative;
+}
+header #mobile-menu-dropdown #mobile-menu {
+  position: absolute;
+  width: 25vw;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1A1A1B;
+  border: 1px solid #676767;
+  border-radius: 3px;
+  padding: 10px;
+}
+header #mobile-menu-dropdown #mobile-menu .mobile-user .mobile-log {
+  margin-bottom: 20px;
+  background: none;
+  border: none;
+  font-size: 2.5vh;
+  line-height: 2.5vh;
+  color: whitesmoke;
+}
+header #mobile-menu-dropdown #mobile-menu .github-mobile {
+  font-size: 4vh;
+}
 
+@media (max-width: 1000px) {
+  header {
+    max-height: 10vh !important;
+  }
+  header .logo img {
+    width: 8vh;
+  }
+  header .dropdown-button {
+    font-size: 65px;
+    line-height: 65px;
+  }
+  header .user-search-bar input[type=search] {
+    height: 5vh;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  header .user-search-bar ::-moz-placeholder {
+    font-size: 1.5rem;
+  }
+  header .user-search-bar :-ms-input-placeholder {
+    font-size: 1.5rem;
+  }
+  header .user-search-bar ::placeholder {
+    font-size: 1.5rem;
+  }
+  header .github, header .user, header #usr-dropdown {
+    display: none;
+  }
+  header #mobile-menu-dropdown {
+    display: block;
+    margin-right: auto;
+  }
+  header #mobile-menu-dropdown i {
+    font-size: 50px;
+  }
+}
 .usr-card {
   width: 100%;
   margin-bottom: 50px;
@@ -367,8 +428,8 @@ header #usr-dropdown .usr-options #logout button {
 
 #comm-info {
   position: absolute;
-  right: calc(-10px + -15vw);
-  width: 15vw;
+  right: -20vw;
+  width: 20vw;
   background: none;
   border: 2px solid #9a9b9c;
   border-radius: 5px;
@@ -638,6 +699,10 @@ body, html {
   }
 }
 @media (max-width: 1050px) {
+  .main-container {
+    margin-top: 10vh;
+  }
+
   .btn {
     font-size: 2.5rem;
   }
