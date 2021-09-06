@@ -590,18 +590,6 @@ body, html {
   position: relative;
 }
 
-#subscribe {
-  text-align: center;
-  margin: 20px auto;
-  width: 15vw;
-}
-#subscribe .newsletter {
-  border: 1.5px solid #9a9b9c;
-  background: none;
-  border-radius: 5px;
-  color: whitesmoke;
-}
-
 .load-spinner {
   -webkit-animation: rotation 2s infinite linear;
           animation: rotation 2s infinite linear;
