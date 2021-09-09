@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap);
 .success {
@@ -126,10 +127,9 @@ header {
   font-family: "Roboto", sans-serif;
   position: fixed;
   width: 100vw;
-  max-height: 100px;
+  height: 70px;
   top: 0;
   padding: 0;
-  margin-bottom: 30px;
   display: flex;
   align-items: center;
   background-color: rgba(26, 26, 27, 0.95);
@@ -184,27 +184,33 @@ header .community-filter .communities-menu div:hover {
   background-color: #676767;
 }
 header .user-search-bar {
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   height: 100%;
+  background-color: red;
 }
-header .user-search-bar input[type=search] {
-  height: 37px;
+header .user-search-bar .search-form {
+  width: 100%;
+  margin-top: 25px;
+}
+header .user-search-bar .search-form input[type=search] {
   width: 50vw;
   border: 1px solid #9a9b9c;
   border-radius: 2.5px;
   background-color: #3A3A3C;
-  font-size: 20px;
   color: whitesmoke;
+  padding-left: 15px;
 }
-header .user-search-bar input[type=search] ::-moz-placeholder {
+header .user-search-bar .search-form input[type=search] ::-moz-placeholder {
   color: whitesmoke;
+  text-align: center;
 }
-header .user-search-bar input[type=search] :-ms-input-placeholder {
+header .user-search-bar .search-form input[type=search] :-ms-input-placeholder {
   color: whitesmoke;
+  text-align: center;
 }
-header .user-search-bar input[type=search] ::placeholder {
+header .user-search-bar .search-form input[type=search] ::placeholder {
   color: whitesmoke;
+  text-align: center;
 }
 header .github {
   margin: auto auto;
@@ -296,42 +302,6 @@ header #mobile-menu-dropdown #mobile-menu .github-mobile {
   font-size: 4vh;
 }
 
-@media (max-width: 1000px) {
-  header {
-    max-height: 10vh !important;
-  }
-  header .logo img {
-    width: 8vh;
-  }
-  header .dropdown-button {
-    font-size: 65px;
-    line-height: 65px;
-  }
-  header .user-search-bar input[type=search] {
-    height: 5vh;
-    font-size: 1.5rem;
-    padding: 10px;
-  }
-  header .user-search-bar ::-moz-placeholder {
-    font-size: 1.5rem;
-  }
-  header .user-search-bar :-ms-input-placeholder {
-    font-size: 1.5rem;
-  }
-  header .user-search-bar ::placeholder {
-    font-size: 1.5rem;
-  }
-  header .github, header .user, header #usr-dropdown {
-    display: none;
-  }
-  header #mobile-menu-dropdown {
-    display: block;
-    margin-right: auto;
-  }
-  header #mobile-menu-dropdown i {
-    font-size: 50px;
-  }
-}
 .usr-card {
   width: 100%;
   margin-bottom: 50px;
@@ -491,6 +461,7 @@ header #mobile-menu-dropdown #mobile-menu .github-mobile {
 #up-container {
   width: 60vw;
   margin: auto;
+  font-size: 1.5rem;
 }
 #up-container article {
   width: 100%;
@@ -505,22 +476,27 @@ header #mobile-menu-dropdown #mobile-menu .github-mobile {
   color: whitesmoke !important;
 }
 #up-container article .post-info {
+  margin-top: 10px;
   position: relative;
+  font-size: 0.75em;
+  font-weight: bolder;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 #up-container article .post-info span {
-  font-size: 17px;
-  color: #c0c0c0;
+  font-weight: lighter;
 }
 #up-container article .post-info a {
-  font-size: 17px;
   text-decoration: none;
+  font-weight: bolder;
 }
 #up-container article .post-info a:hover {
   text-decoration: underline !important;
 }
 #up-container article .post-info .community_name {
   margin: 0;
-  font-weight: lighter;
+  font-weight: bolder;
 }
 #up-container article .post-info #post-opts {
   position: absolute;
@@ -545,29 +521,30 @@ header #mobile-menu-dropdown #mobile-menu .github-mobile {
   padding: 5px;
 }
 #up-container article .title {
-  width: 90%;
   font-weight: bold;
 }
-#up-container article .excerpt {
-  font-weight: lighter;
+#up-container article .excerpt, #up-container article .post-body {
+  font-weight: 300;
+  line-height: 1.2em;
 }
 #up-container article:hover {
   border: 1px solid #9a9b9c;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
+  #up-container {
+    width: 80vw;
+  }
   #up-container article .post-info {
     margin-bottom: 10px;
-  }
-  #up-container article .post-info span, #up-container article .post-info a {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   #up-container article .title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 10px;
   }
-  #up-container article .excerpt {
-    font-size: 2rem;
+  #up-container article .post-body {
+    font-size: 2.5rem;
   }
 }
 body {
@@ -644,9 +621,10 @@ body {
 }
 
 body, html {
+  height: 100%;
+  width: 100%;
   margin: 0;
   font-family: "Roboto";
-  font-size: 120%;
   color: whitesmoke;
   background-color: #000000;
 }
@@ -671,6 +649,7 @@ body, html {
   background: none;
   border-radius: 5px;
   color: whitesmoke;
+  font-size: 2.5rem;
   width: 90%;
   margin: auto;
   padding: 0;
@@ -700,7 +679,7 @@ body, html {
 }
 
 .main-container {
-  margin-top: 100px;
+  margin-top: 95px;
 }
 .main-container #up-container {
   display: flex;
@@ -733,18 +712,5 @@ body, html {
   }
   to {
     transform: rotate(359deg);
-  }
-}
-@media (max-width: 1050px) {
-  .main-container {
-    margin-top: 10vh;
-  }
-
-  .btn {
-    font-size: 2.5rem;
-  }
-
-  .error-msg {
-    font-size: 2rem;
   }
 }

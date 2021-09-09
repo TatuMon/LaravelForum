@@ -13,12 +13,13 @@
     <x-comm-dropdown />
 
     <div class="user-search-bar">
-        <form method="GET" action="">
+        <form method="GET" action="" class="search-form">
             <input
             type="search"
             name="search"
             spellcheck="false"
             placeholder="Search for a user or a post"
+            class="search"
             value="{{ request('search') }}"
             >
         </form>

@@ -26,8 +26,8 @@
                     @endif
                 @endauth
             </div>
-            <h1 id="title">{{ $post->title }}</h1>
-            <p>{!! FormatStr::keepEnters($post->body) !!}</p>
+            <h1 id="title" class="title">{{ $post->title }}</h1>
+            <p class="post-body">{!! FormatStr::keepEnters($post->body) !!}</p>
 
             <x-make-comment :post="$post"/>
 

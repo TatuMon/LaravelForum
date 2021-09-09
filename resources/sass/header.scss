@@ -2,10 +2,9 @@ header{
     font-family: 'Roboto', sans-serif;
     position: fixed;
     width: 100vw;
-    max-height: 100px;
+    height: 70px;
     top: 0;
     padding: 0;
-    margin-bottom: 30px;
     display: flex;
     align-items: center;
     background-color: rgba(26, 26, 27, 0.95);
@@ -63,21 +62,26 @@ header{
     }
 
     .user-search-bar{
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
         height: 100%;
+        background-color: red;
         
-        input[type='search']{
-            height: 37px;
-            width: 50vw;
-            border: 1px solid #9a9b9c;
-            border-radius: 2.5px;
-            background-color: #3A3A3C;
-            font-size: 20px;
-            color: whitesmoke;
+        .search-form{
+            width: 100%;
+            margin-top: 25px;
 
-            ::placeholder{
+            input[type='search']{
+                width: 50vw;
+                border: 1px solid #9a9b9c;
+                border-radius: 2.5px;
+                background-color: #3A3A3C;
                 color: whitesmoke;
+                padding-left: 15px;
+    
+                ::placeholder{
+                    color: whitesmoke;
+                    text-align: center;
+                }
             }
         }
     }
@@ -187,44 +191,40 @@ header{
     }
 }
 
-@media (max-width: 1000px){
-    header{
-        max-height: 10vh !important;
+// @media (max-width: 1000px){
+//     header{
+//         height: 10%;
 
-        .logo{
-            img{
-                width: 8vh;
-            }
-        }
+//         .logo{
+//             img{
+//                 width: 8vw;
+//             }
+//         }
 
-        .dropdown-button{
-            font-size: 65px;
-            line-height: 65px;
-        }
+//         .dropdown-button{
+//             font-size: 5vw;
+//             line-height: 5vw;
+//         }
 
-        .user-search-bar{
-            input[type='search']{
-                height: 5vh;
-                font-size: 1.5rem;
-                padding: 10px;
-            }
+//         .user-search-bar{
+//             input[type='search']{
+//             }
 
-            ::placeholder{
-                font-size: 1.5rem;
-            }
-        }
+//             ::placeholder{
+//             }
+//         }
 
-        .github, .user, #usr-dropdown{
-            display: none;
-        }
+//         .github, .user, #usr-dropdown{
+//             display: none;
+//         }
 
-        #mobile-menu-dropdown{
-            display: block;
-            margin-right: auto;
+//         #mobile-menu-dropdown{
+//             display: block;
+//             margin-right: auto;
 
-            i{
-                font-size: 50px;
-            }
-        }
-    }
-}
+//             i{
+//                 font-size: 50px;
+//             }
+//         }
+//     }
+// }

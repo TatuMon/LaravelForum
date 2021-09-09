@@ -1,5 +1,6 @@
 //Here goes ONLY the imports, the default app styling and the styling that would affect primarly the layout blade component
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import "_variables";
 @import "session-success";
@@ -15,9 +16,10 @@
 @import "paginator";
 
 body, html{
+    height: 100%;
+    width: 100%;
     margin: 0;
     font-family: 'Roboto';
-    font-size: 120%;
     color: $font;
     background-color: $background;
 }
@@ -42,6 +44,7 @@ body, html{
     background: none;
     border-radius: 5px;
     color: $font;
+    font-size: 2.5rem;
     width: 90%;
     margin: auto;
     padding: 0;
@@ -68,7 +71,7 @@ body, html{
 }
 
 .main-container{
-    margin-top: 100px;
+    margin-top: 95px;
     
     #up-container{
         display: flex;
@@ -91,16 +94,16 @@ body, html{
     to { transform: rotate(359deg); }
 }
 
-@media (max-width: 1050px){
-    .main-container{
-        margin-top: 10vh;
-    }
+// @media (max-width: 1050px){
+//     .main-container{
+//         margin-top: 7%;
+//     }
 
-    .btn{
-        font-size: 2.5rem;
-    }
+//     .btn{
+//         font-size: 2.5rem;
+//     }
 
-    .error-msg{
-        font-size: 2rem;
-    }
-}
+//     .error-msg{
+//         font-size: 2rem;
+//     }
+// }

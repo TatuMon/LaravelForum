@@ -6,6 +6,7 @@
 #up-container{
     width: 60vw;
     margin: auto;
+    font-size: 1.5rem;
 
     article{
         width: 100%;
@@ -21,16 +22,21 @@
         }
 
         .post-info{
+            margin-top: 10px;
             position: relative;
+            font-size: .75em;
+            font-weight: bolder;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
     
             span{
-                font-size: 17px;
-                color: #c0c0c0;
+                font-weight: lighter;
             }
     
             a{
-                font-size: 17px;
                 text-decoration: none;
+                font-weight: bolder;
             }
 
             a:hover{
@@ -39,7 +45,7 @@
     
             .community_name{
                 margin: 0;
-                font-weight: lighter;
+                font-weight: bolder;
             }
     
             #post-opts{
@@ -69,12 +75,12 @@
         }
     
         .title{
-            width: 90%;
             font-weight: bold;
         }
 
-        .excerpt{
-            font-weight: lighter;
+        .excerpt, .post-body{
+            font-weight: 300;
+            line-height: 1.2em;
         }
     };
     
@@ -83,24 +89,23 @@
     }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 992px){
     #up-container{
+        width: 80vw;
 
         article{
             .post-info{
                 margin-bottom: 10px;
-                span, a{
-                    font-size: 1.5rem;
-                }
+                font-size: 2rem;
             }
 
             .title{
-                font-size: 2.5rem;
+                font-size: 3.5rem;
                 margin-bottom: 10px;
             }
 
-            .excerpt{
-                font-size: 2rem;
+            .post-body{
+                font-size: 2.5rem;
             }
         }
     }
