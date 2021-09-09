@@ -13,5 +13,5 @@
             @endif
         @endauth
     </div>
-    <p>{!! $comment->content !!}</p>
+    <p class="comment-body">{!! $comment->content !!}</p>
 </section>

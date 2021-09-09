@@ -186,7 +186,6 @@ header .community-filter .communities-menu div:hover {
 header .user-search-bar {
   margin: auto;
   height: 100%;
-  background-color: red;
 }
 header .user-search-bar .search-form {
   width: 100%;
@@ -323,7 +322,7 @@ header #mobile-menu-dropdown #mobile-menu .github-mobile {
   margin-bottom: 50px;
 }
 .comment-creator-box .comment-as {
-  font-size: 17px;
+  font-size: 1.5rem;
 }
 .comment-creator-box .comment-creator {
   width: 100%;
@@ -363,10 +362,14 @@ header #mobile-menu-dropdown #mobile-menu .github-mobile {
 }
 .comment-box .info .delete-comment {
   margin-left: auto;
+  cursor: pointer;
 }
 .comment-box .user-logo {
   border-radius: 50%;
   width: 50px;
+}
+.comment-box .comment-body {
+  font-size: 2.5rem;
 }
 .comment-box .respond {
   color: whitesmoke;
@@ -376,6 +379,38 @@ header #mobile-menu-dropdown #mobile-menu .github-mobile {
   font-size: 20px;
 }
 
+@media (max-width: 1000px) {
+  .comment-creator-box {
+    margin-bottom: 100px;
+  }
+  .comment-creator-box .comment-creator {
+    min-height: 250px;
+    font-size: 2rem;
+  }
+  .comment-creator-box .submit-comment {
+    font-size: 2rem;
+  }
+
+  .comment-box {
+    margin-top: 20px;
+    border-left: 3px solid #9a9b9c;
+    padding-left: 10px;
+    line-height: normal;
+  }
+  .comment-box .info {
+    font-size: 2rem;
+    display: flex;
+  }
+  .comment-box .info .delete-comment {
+    margin-left: auto;
+    font-size: 3rem;
+  }
+  .comment-box .user-logo {
+    border-radius: 50%;
+    width: 6vw;
+    margin-right: 10px;
+  }
+}
 #main-info {
   display: flex;
   align-items: center;
@@ -537,7 +572,7 @@ header #mobile-menu-dropdown #mobile-menu .github-mobile {
   }
   #up-container article .post-info {
     margin-bottom: 10px;
-    font-size: 2rem;
+    font-size: 3vw;
   }
   #up-container article .title {
     font-size: 3.5rem;

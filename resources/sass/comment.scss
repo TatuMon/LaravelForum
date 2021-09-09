@@ -2,7 +2,7 @@
     margin-bottom: 50px;
 
     .comment-as{
-        font-size: 17px;
+        font-size: 1.5rem;
     }
 
     .comment-creator{
@@ -40,12 +40,17 @@
 
         .delete-comment{
             margin-left: auto;
+            cursor: pointer;
         }
     }
 
     .user-logo{
         border-radius: 50%;
         width: 50px;
+    }
+
+    .comment-body{
+        font-size: 2.5rem;
     }
     
     .respond{
@@ -54,5 +59,43 @@
         border: 1.5px solid #9a9b9c;
         border-radius: 5px;
         font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px){
+    .comment-creator-box{
+        margin-bottom: 100px;
+
+        .comment-creator{
+            min-height: 250px;
+            font-size: 2rem;
+        }
+
+        .submit-comment{
+            font-size: 2rem;
+        }
+    }
+
+    .comment-box{
+        margin-top: 20px;
+        border-left: 3px solid #9a9b9c;
+        padding-left: 10px;
+        line-height: normal;
+    
+        .info{
+            font-size: 2rem;
+            display: flex;
+    
+            .delete-comment{
+                margin-left: auto;
+                font-size: 3rem;
+            }
+        }
+    
+        .user-logo{
+            border-radius: 50%;
+            width: 6vw;
+            margin-right: 10px;
+        }
     }
 }
