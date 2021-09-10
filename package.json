@@ -19,5 +19,8 @@
         "resolve-url-loader": "^4.0.0",
         "sass": "^1.37.5",
         "sass-loader": "^12.1.0"
+    },
+    "dependencies": {
+        "ansi-html": "0.0.7"
     }
 }
