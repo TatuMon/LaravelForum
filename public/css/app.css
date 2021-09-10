@@ -255,6 +255,7 @@ header #header-user #usr-dropdown .usr-options {
   border: 1.5px solid #9a9b9c;
   border-radius: 5px;
   right: 20px;
+  font-size: 1.5rem;
 }
 header #header-user #usr-dropdown .usr-options a {
   color: whitesmoke;
