@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.21",
+        "axios": "^0.21.4",
         "cross-env": "^7.0.3",
         "cypress": "^8.3.1",
         "laravel-mix": "^6.0.25",
