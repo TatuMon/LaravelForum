@@ -13,7 +13,7 @@
     <x-comm-dropdown />
 
     <div class="user-search-bar">
-        <form method="GET" action="" class="search-form">
+        <form method="GET" action="/" class="search-form">
             <input
             type="search"
             name="search"
