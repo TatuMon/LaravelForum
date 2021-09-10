@@ -4,14 +4,13 @@
         <div x-show="show" id="mobile-menu">
             <div class="mobile-user">
                 @guest
-                    <a href="/login"><button class="mobile-log"><i class="fas fa-sign-in-alt"></i> LogIn</button></a>
-                    <a href="/register"><button class="mobile-log"><i class="fas fa-user-plus"></i> SignUp</button></a>
+                    <a href="/login"><button class="mobile-log">LogIn</button></a>
+                    <a href="/register"><button class="mobile-log">SignUp</button></a>
                 @else
-                    <div><i class="fas fa-user"></i> <a href="/usr/{{ auth()->user()->username }}">Profile</a></div>
-                    <div><i class="fas fa-image"></i> <a href="/change-pic">Change profile pic</a></div>
+                    <div><a href="/usr/{{ auth()->user()->username }}">Profile</a></div>
                     <form method="POST" action="/logout" id="logout">
                         @csrf
-                        <button type="submit"><i class="fas fa-sign-out-alt"></i> logout</button>
+                        <button type="submit">Logout</button>
                     </form>
                 @endguest
             </div>

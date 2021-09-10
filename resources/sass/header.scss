@@ -23,11 +23,10 @@ header{
     }
 
     .community-filter{
-        margin: auto 0px;
-        margin-left: auto;
+        margin: auto;
         font-size: 50px;
 
-        .dropdown-button{
+        #comms-icon{
             position: relative;
             cursor: pointer;
             user-select: none;
@@ -40,8 +39,9 @@ header{
             background-color: #1A1A1B;
             border: 1px solid #676767;
             border-radius: 3px;
-            font-size: 20px;
+            font-size: 1.5rem;
             text-align: center;
+            padding: 25px;
 
             div{
                 width: 100%;
@@ -62,12 +62,8 @@ header{
     }
 
     .user-search-bar{
-        margin: auto;
-        height: 100%;
-        
         .search-form{
-            width: 100%;
-            margin-top: 25px;
+            margin: auto 0;
 
             input[type='search']{
                 width: 50vw;
@@ -76,6 +72,7 @@ header{
                 background-color: #3A3A3C;
                 color: whitesmoke;
                 padding-left: 15px;
+                font-size: 1.5rem;
     
                 ::placeholder{
                     color: whitesmoke;
@@ -85,57 +82,68 @@ header{
         }
     }
 
-    .github{
-        margin: auto auto;
-        font-size: 60px;
-    }
+    #header-user{
+        margin: auto;
+        margin-right: 25px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
 
-    .user{
-        margin-right: auto;
-
-        .log{
-            background: none;
-            border: 1.5px solid #9a9b9c;
-            border-radius: 5px;
-            font-size: 23px;
-            color: whitesmoke;
+        .github{
+            margin: auto 20px;
+            font-size: 60px;
         }
-    }
-
-    #usr-dropdown{
-        display: inline-block;
-
-        .username{
-            font-size: 30px;
-            margin-right: 2vw;
-            position: relative;
-            cursor: pointer;
-            user-select: none;
-            text-overflow: ellipsis;
-            display: block;
-        }
-
-        .usr-options{
-            position: absolute;
-            max-width: 250px;
-            max-height: 500;
-            padding: 10px;
-            background-color: $container-background;
-            border: 1.5px solid $border-light;
-            border-radius: 5px;
-            right: 20px;
-
-            a{
-                color: $font;
+    
+        .user{
+            margin-right: auto;
+    
+            .log{
+                background: none;
+                border: 1.5px solid #9a9b9c;
+                border-radius: 5px;
+                font-size: 23px;
+                color: whitesmoke;
             }
-
-            #logout{
-                display: inline-block;
-        
-                button{
-                    background: none;
-                    border: none;
-                    color: whitesmoke;
+        }
+    
+        #usr-dropdown{
+            display: inline-block;
+            margin: auto;
+    
+            .username{
+                font-size: 30px;
+                margin-right: 2vw;
+                position: relative;
+                cursor: pointer;
+                user-select: none;
+                text-overflow: ellipsis;
+                display: block;
+            }
+    
+            .usr-options{
+                position: absolute;
+                max-width: 250px;
+                max-height: 500;
+                padding: 10px;
+                background-color: $container-background;
+                border: 1.5px solid $border-light;
+                border-radius: 5px;
+                right: 20px;
+    
+                a{
+                    color: $font;
+                }
+    
+                #logout{
+                    display: inline-block;
+            
+                    button{
+                        background: none;
+                        border: none;
+                        color: whitesmoke;
+                    }
                 }
             }
         }
@@ -143,32 +151,40 @@ header{
 
     #mobile-menu-dropdown{
         display: none;
+        margin: auto;
         position: relative;
+        font-size: 5vw;
 
         #mobile-menu{
             position: absolute;
-            width: 25vw;
-            right: 0px;
+            min-width: 20vw;
+            padding: 20px;
             display: flex;
+            right: 0;
             flex-direction: column;
+            align-items: center;
             background-color: #1A1A1B;
-            border: 1px solid #676767;
-            border-radius: 3px;
+            border: 5px solid #676767;
+            border-radius: 5px;
             padding: 10px;
 
             .mobile-user{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
                 .mobile-log{
                     margin-bottom: 20px;
                     background: none;
                     border: none;
-                    font-size: 2.5vh;
-                    line-height: 2.5vh;
+                    font-size: calc(50px - .5vw);
                     color: whitesmoke;
+                    text-decoration: underline;
                 }
 
                 a{
                     color: whitesmoke;
-                    font-size: 2.5vh;
+                    font-size: 2.5rem;
                 }
 
                 #logout{
@@ -178,52 +194,62 @@ header{
                         background: none;
                         border: none;
                         color: whitesmoke;
-                        font-size: 2.5vh;
+                        font-size: 2.5rem;
                     }
                 }
             }
 
             .github-mobile{
-                font-size: 4vh;
+                font-size: calc(100px - 2vw);
+                align-self: center !important;
             }
         }
     }
 }
 
-// @media (max-width: 1000px){
-//     header{
-//         height: 10%;
+@media (max-width: 1000px){
+    header{
+        height: 150px;
 
-//         .logo{
-//             img{
-//                 width: 8vw;
-//             }
-//         }
+        .logo{
+            img{
+                width: 10vw;
+            }
+        }
 
-//         .dropdown-button{
-//             font-size: 5vw;
-//             line-height: 5vw;
-//         }
+        .comms-icon{
+            font-size: 5vw;
+        }
 
-//         .user-search-bar{
-//             input[type='search']{
-//             }
+        .community-filter{
+            
+            .communities-menu{
+                text-size-adjust: 200%;
 
-//             ::placeholder{
-//             }
-//         }
+                div{
+                    margin: 25px 0;
+                }
+            }
+        }
 
-//         .github, .user, #usr-dropdown{
-//             display: none;
-//         }
+        .user-search-bar{
+            .search-form{
+                font-size: 3rem;
+                line-height: 3rem;
 
-//         #mobile-menu-dropdown{
-//             display: block;
-//             margin-right: auto;
+                .search:placeholder-shown{
+                    text-overflow: ellipsis;
+                }
+            }
+        }
 
-//             i{
-//                 font-size: 50px;
-//             }
-//         }
-//     }
-// }
+        #header-user{
+            display: none;
+        }
+
+        #mobile-menu-dropdown{
+            display: block;
+            text-align: center;
+        }
+    }
+}

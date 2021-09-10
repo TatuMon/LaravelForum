@@ -145,11 +145,10 @@ header .logo img {
   width: 70px;
 }
 header .community-filter {
-  margin: auto 0px;
-  margin-left: auto;
+  margin: auto;
   font-size: 50px;
 }
-header .community-filter .dropdown-button {
+header .community-filter #comms-icon {
   position: relative;
   cursor: pointer;
   -webkit-user-select: none;
@@ -167,8 +166,9 @@ header .community-filter .communities-menu {
   background-color: #1A1A1B;
   border: 1px solid #676767;
   border-radius: 3px;
-  font-size: 20px;
+  font-size: 1.5rem;
   text-align: center;
+  padding: 25px;
 }
 header .community-filter .communities-menu div {
   width: 100%;
@@ -183,13 +183,8 @@ header .community-filter .communities-menu div a {
 header .community-filter .communities-menu div:hover {
   background-color: #676767;
 }
-header .user-search-bar {
-  margin: auto;
-  height: 100%;
-}
 header .user-search-bar .search-form {
-  width: 100%;
-  margin-top: 25px;
+  margin: auto 0;
 }
 header .user-search-bar .search-form input[type=search] {
   width: 50vw;
@@ -198,6 +193,7 @@ header .user-search-bar .search-form input[type=search] {
   background-color: #3A3A3C;
   color: whitesmoke;
   padding-left: 15px;
+  font-size: 1.5rem;
 }
 header .user-search-bar .search-form input[type=search] ::-moz-placeholder {
   color: whitesmoke;
@@ -211,24 +207,34 @@ header .user-search-bar .search-form input[type=search] ::placeholder {
   color: whitesmoke;
   text-align: center;
 }
-header .github {
-  margin: auto auto;
+header #header-user {
+  margin: auto;
+  margin-right: 25px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+header #header-user .github {
+  margin: auto 20px;
   font-size: 60px;
 }
-header .user {
+header #header-user .user {
   margin-right: auto;
 }
-header .user .log {
+header #header-user .user .log {
   background: none;
   border: 1.5px solid #9a9b9c;
   border-radius: 5px;
   font-size: 23px;
   color: whitesmoke;
 }
-header #usr-dropdown {
+header #header-user #usr-dropdown {
   display: inline-block;
+  margin: auto;
 }
-header #usr-dropdown .username {
+header #header-user #usr-dropdown .username {
   font-size: 30px;
   margin-right: 2vw;
   position: relative;
@@ -240,7 +246,7 @@ header #usr-dropdown .username {
   text-overflow: ellipsis;
   display: block;
 }
-header #usr-dropdown .usr-options {
+header #header-user #usr-dropdown .usr-options {
   position: absolute;
   max-width: 250px;
   max-height: 500;
@@ -250,43 +256,52 @@ header #usr-dropdown .usr-options {
   border-radius: 5px;
   right: 20px;
 }
-header #usr-dropdown .usr-options a {
+header #header-user #usr-dropdown .usr-options a {
   color: whitesmoke;
 }
-header #usr-dropdown .usr-options #logout {
+header #header-user #usr-dropdown .usr-options #logout {
   display: inline-block;
 }
-header #usr-dropdown .usr-options #logout button {
+header #header-user #usr-dropdown .usr-options #logout button {
   background: none;
   border: none;
   color: whitesmoke;
 }
 header #mobile-menu-dropdown {
   display: none;
+  margin: auto;
   position: relative;
+  font-size: 5vw;
 }
 header #mobile-menu-dropdown #mobile-menu {
   position: absolute;
-  width: 25vw;
-  right: 0px;
+  min-width: 20vw;
+  padding: 20px;
+  display: flex;
+  right: 0;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1A1A1B;
+  border: 5px solid #676767;
+  border-radius: 5px;
+  padding: 10px;
+}
+header #mobile-menu-dropdown #mobile-menu .mobile-user {
   display: flex;
   flex-direction: column;
-  background-color: #1A1A1B;
-  border: 1px solid #676767;
-  border-radius: 3px;
-  padding: 10px;
+  justify-content: center;
 }
 header #mobile-menu-dropdown #mobile-menu .mobile-user .mobile-log {
   margin-bottom: 20px;
   background: none;
   border: none;
-  font-size: 2.5vh;
-  line-height: 2.5vh;
+  font-size: calc(50px - .5vw);
   color: whitesmoke;
+  text-decoration: underline;
 }
 header #mobile-menu-dropdown #mobile-menu .mobile-user a {
   color: whitesmoke;
-  font-size: 2.5vh;
+  font-size: 2.5rem;
 }
 header #mobile-menu-dropdown #mobile-menu .mobile-user #logout {
   display: inline-block;
@@ -295,12 +310,52 @@ header #mobile-menu-dropdown #mobile-menu .mobile-user #logout button {
   background: none;
   border: none;
   color: whitesmoke;
-  font-size: 2.5vh;
+  font-size: 2.5rem;
 }
 header #mobile-menu-dropdown #mobile-menu .github-mobile {
-  font-size: 4vh;
+  font-size: calc(100px - 2vw);
+  align-self: center !important;
 }
 
+@media (max-width: 1000px) {
+  header {
+    height: 150px;
+  }
+  header .logo img {
+    width: 10vw;
+  }
+  header .comms-icon {
+    font-size: 5vw;
+  }
+  header .community-filter .communities-menu {
+    -webkit-text-size-adjust: 200%;
+       -moz-text-size-adjust: 200%;
+            text-size-adjust: 200%;
+  }
+  header .community-filter .communities-menu div {
+    margin: 25px 0;
+  }
+  header .user-search-bar .search-form {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  header .user-search-bar .search-form .search:-moz-placeholder-shown {
+    text-overflow: ellipsis;
+  }
+  header .user-search-bar .search-form .search:-ms-input-placeholder {
+    text-overflow: ellipsis;
+  }
+  header .user-search-bar .search-form .search:placeholder-shown {
+    text-overflow: ellipsis;
+  }
+  header #header-user {
+    display: none;
+  }
+  header #mobile-menu-dropdown {
+    display: block;
+    text-align: center;
+  }
+}
 .usr-card {
   width: 100%;
   margin-bottom: 50px;
@@ -771,5 +826,10 @@ body, html {
   }
   to {
     transform: rotate(359deg);
+  }
+}
+@media (max-width: 1000px) {
+  .main-container {
+    margin-top: 200px;
   }
 }

@@ -25,15 +25,17 @@
         </form>
     </div>
 
-    <i class="fab fa-github github"></i>
+    <div id="header-user">
+        <i class="fab fa-github github"></i>
 
-    <div class="user">
-        @guest
-            <a href="/login"><button class="log">LogIn</button></a>
-            <a href="/register"><button class="log">SignUp</button></a>
-        @else
-            <x-usr-dropdown/>
-        @endguest
+        <div class="user">
+            @guest
+                <a href="/login"><button class="log">LogIn</button></a>
+                <a href="/register"><button class="log">SignUp</button></a>
+            @else
+                <x-usr-dropdown/>
+            @endguest
+        </div>
     </div>
 
     <x-mediaquery-header />
